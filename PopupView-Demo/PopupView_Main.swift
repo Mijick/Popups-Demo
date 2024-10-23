@@ -14,16 +14,5 @@ import MijickPopups
 @main struct PopupView_Main: App {
     var body: some Scene { WindowGroup {
         ContentView()
-            .registerPopups { config in config
-                .vertical { $0
-                    .enableDragGesture(true)
-                    .tapOutsideToDismissPopup(true)
-                    .cornerRadius(32)
-                }
-                .centre { $0
-                    .tapOutsideToDismissPopup(false)
-                    .backgroundColor(.red)
-                }
-            }
     }}
 }

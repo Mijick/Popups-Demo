@@ -13,7 +13,7 @@ import SwiftUI
 // MARK: -iOS & tvOS Implementation
 #if os(iOS) || os(tvOS)
 class Screen {
-    static var safeArea: UIEdgeInsets = UIScreen.safeArea
+    @MainActor static var safeArea: UIEdgeInsets = UIScreen.safeArea
 }
 fileprivate extension UIScreen {
     static var safeArea: UIEdgeInsets {
