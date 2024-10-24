@@ -18,7 +18,8 @@ struct ContentView: View {
 
 private extension ContentView {
     func createContent() -> some View {
-        VStack(spacing: 44) {
+        VStack(spacing: 10) {
+           
         }
         .padding(.top, 40)
         .padding(.bottom, 32)

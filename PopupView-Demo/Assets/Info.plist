@@ -4,14 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>SpaceGrotesk-Bold.ttf</string>
-		<string>OpenSans-Bold.ttf</string>
-		<string>OpenSans-Regular.ttf</string>
-		<string>Satoshi-Black.otf</string>
-		<string>Satoshi-Bold.otf</string>
-		<string>Satoshi-Regular.otf</string>
 		<string>Inter-Bold.ttf</string>
-		<string>Inter-SemiBold.ttf</string>
 		<string>Inter-Regular.ttf</string>
 	</array>
 </dict>

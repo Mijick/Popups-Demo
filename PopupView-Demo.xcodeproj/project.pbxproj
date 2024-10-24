@@ -12,20 +12,30 @@
 		6D4C04BC29AED11E00165FC2 /* UIScreen++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4C04BB29AED11E00165FC2 /* UIScreen++.swift */; };
 		6D4C04C029AED6E400165FC2 /* Spacer++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4C04BF29AED6E400165FC2 /* Spacer++.swift */; };
 		6D4C04C229AED7D900165FC2 /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4C04C129AED7D900165FC2 /* String++.swift */; };
+		6D8F7EC22CC8F07B00A7F194 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D8F7EC12CC8F07B00A7F194 /* Colors.xcassets */; };
+		6D8F7EC82CC8F95F00A7F194 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F7EC72CC8F95900A7F194 /* CustomFont.swift */; };
+		6D8F7ED42CC91C8300A7F194 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F7ED32CC91C7F00A7F194 /* Icon.swift */; };
+		6D8F7ED92CC91F5500A7F194 /* BrandingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F7ED82CC91F5000A7F194 /* BrandingContent.swift */; };
+		6D8F7EE02CC9254900A7F194 /* ButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F7EDF2CC9253C00A7F194 /* ButtonIcon.swift */; };
+		6D8F7EE42CC929C400A7F194 /* SocialMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F7EE32CC929C200A7F194 /* SocialMediaView.swift */; };
+		6D8F7EE72CC9490600A7F194 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F7EE62CC948FF00A7F194 /* Configurable.swift */; };
+		6D8F7EEA2CC94A3E00A7F194 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F7EE92CC94A3A00A7F194 /* PrimaryButton.swift */; };
+		6D8F7EEC2CC94A8700A7F194 /* PrimaryButton.Width.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F7EEB2CC94A8300A7F194 /* PrimaryButton.Width.swift */; };
+		6D8F7EEE2CC94E9A00A7F194 /* PrimaryButton.Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F7EED2CC94E9800A7F194 /* PrimaryButton.Appearance.swift */; };
+		6D9B9DCE2CC95AFC00FCF58B /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9B9DCD2CC95AED00FCF58B /* ItemCard.swift */; };
+		6D9B9DD02CCA5A0B00FCF58B /* BottomCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9B9DCF2CCA5A0400FCF58B /* BottomCardType.swift */; };
+		6D9B9DD22CCA5BA600FCF58B /* CentreCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9B9DD12CCA5BA400FCF58B /* CentreCardType.swift */; };
+		6D9B9DD42CCA5BB200FCF58B /* TopCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9B9DD32CCA5BB000FCF58B /* TopCardType.swift */; };
+		6D9B9DD82CCA5C8000FCF58B /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9B9DD72CCA5C7E00FCF58B /* CardType.swift */; };
+		6D9B9DDB2CCA5E4900FCF58B /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9B9DDA2CCA5E4500FCF58B /* Tag.swift */; };
+		6D9B9DDD2CCA6DF000FCF58B /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9B9DDC2CCA6DE700FCF58B /* PrimaryTextField.swift */; };
 		6DA1411B29AF720C00A3DC0A /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA1411A29AF720C00A3DC0A /* View++.swift */; };
 		6DAD242B2C96FDA8009CE12B /* MijickPopups in Frameworks */ = {isa = PBXBuildFile; productRef = 6DAD242A2C96FDA8009CE12B /* MijickPopups */; };
 		6DC0834C29ACA33E0031481C /* PopupView_Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC0834B29ACA33E0031481C /* PopupView_Main.swift */; };
 		6DC0834E29ACA33E0031481C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC0834D29ACA33E0031481C /* ContentView.swift */; };
-		6DC0835029ACA3400031481C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC0834F29ACA3400031481C /* Assets.xcassets */; };
+		6DC0835029ACA3400031481C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC0834F29ACA3400031481C /* Images.xcassets */; };
 		6DC8D35D29AEC77E005FF18C /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D35429AEC77E005FF18C /* Inter-Bold.ttf */; };
 		6DC8D35E29AEC77E005FF18C /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D35529AEC77E005FF18C /* Inter-Regular.ttf */; };
-		6DC8D36229AEC77E005FF18C /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D35929AEC77E005FF18C /* Inter-SemiBold.ttf */; };
-		6DC8D36F29AEC7A3005FF18C /* Satoshi-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D36529AEC7A3005FF18C /* Satoshi-Black.otf */; };
-		6DC8D37229AEC7A3005FF18C /* Satoshi-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D36829AEC7A3005FF18C /* Satoshi-Bold.otf */; };
-		6DC8D37529AEC7A3005FF18C /* Satoshi-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D36B29AEC7A3005FF18C /* Satoshi-Regular.otf */; };
-		6DC8D38529AEC7D7005FF18C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D37B29AEC7D7005FF18C /* OpenSans-Regular.ttf */; };
-		6DC8D38929AEC7D7005FF18C /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D37F29AEC7D7005FF18C /* OpenSans-Bold.ttf */; };
-		6DC8D39229AEC7F4005FF18C /* SpaceGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6DC8D38D29AEC7F4005FF18C /* SpaceGrotesk-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,20 +44,30 @@
 		6D4C04BB29AED11E00165FC2 /* UIScreen++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen++.swift"; sourceTree = "<group>"; };
 		6D4C04BF29AED6E400165FC2 /* Spacer++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Spacer++.swift"; sourceTree = "<group>"; };
 		6D4C04C129AED7D900165FC2 /* String++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++.swift"; sourceTree = "<group>"; };
+		6D8F7EC12CC8F07B00A7F194 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		6D8F7EC72CC8F95900A7F194 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		6D8F7ED32CC91C7F00A7F194 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		6D8F7ED82CC91F5000A7F194 /* BrandingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandingContent.swift; sourceTree = "<group>"; };
+		6D8F7EDF2CC9253C00A7F194 /* ButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIcon.swift; sourceTree = "<group>"; };
+		6D8F7EE32CC929C200A7F194 /* SocialMediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaView.swift; sourceTree = "<group>"; };
+		6D8F7EE62CC948FF00A7F194 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
+		6D8F7EE92CC94A3A00A7F194 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		6D8F7EEB2CC94A8300A7F194 /* PrimaryButton.Width.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.Width.swift; sourceTree = "<group>"; };
+		6D8F7EED2CC94E9800A7F194 /* PrimaryButton.Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.Appearance.swift; sourceTree = "<group>"; };
+		6D9B9DCD2CC95AED00FCF58B /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
+		6D9B9DCF2CCA5A0400FCF58B /* BottomCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardType.swift; sourceTree = "<group>"; };
+		6D9B9DD12CCA5BA400FCF58B /* CentreCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentreCardType.swift; sourceTree = "<group>"; };
+		6D9B9DD32CCA5BB000FCF58B /* TopCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCardType.swift; sourceTree = "<group>"; };
+		6D9B9DD72CCA5C7E00FCF58B /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		6D9B9DDA2CCA5E4500FCF58B /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		6D9B9DDC2CCA6DE700FCF58B /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
 		6DA1411A29AF720C00A3DC0A /* View++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View++.swift"; sourceTree = "<group>"; };
 		6DC0834829ACA33E0031481C /* MijickPopups-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MijickPopups-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC0834B29ACA33E0031481C /* PopupView_Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView_Main.swift; sourceTree = "<group>"; };
 		6DC0834D29ACA33E0031481C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6DC0834F29ACA3400031481C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DC0834F29ACA3400031481C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6DC8D35429AEC77E005FF18C /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		6DC8D35529AEC77E005FF18C /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
-		6DC8D35929AEC77E005FF18C /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
-		6DC8D36529AEC7A3005FF18C /* Satoshi-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Black.otf"; sourceTree = "<group>"; };
-		6DC8D36829AEC7A3005FF18C /* Satoshi-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Bold.otf"; sourceTree = "<group>"; };
-		6DC8D36B29AEC7A3005FF18C /* Satoshi-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Satoshi-Regular.otf"; sourceTree = "<group>"; };
-		6DC8D37B29AEC7D7005FF18C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		6DC8D37F29AEC7D7005FF18C /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		6DC8D38D29AEC7F4005FF18C /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; };
 		6DC8D39729AEC80E005FF18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +94,67 @@
 				6DA1411A29AF720C00A3DC0A /* View++.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6D8F7EC52CC8F91D00A7F194 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				6D9B9DCD2CC95AED00FCF58B /* ItemCard.swift */,
+				6D8F7ED82CC91F5000A7F194 /* BrandingContent.swift */,
+				6D8F7EE32CC929C200A7F194 /* SocialMediaView.swift */,
+				6D8F7EDF2CC9253C00A7F194 /* ButtonIcon.swift */,
+				6D8F7ED32CC91C7F00A7F194 /* Icon.swift */,
+				6D9B9DDE2CCA6DF800FCF58B /* Primary Text Field */,
+				6D8F7ED72CC91E7900A7F194 /* Primary Button */,
+				6D8F7ECD2CC9047300A7F194 /* Modifiers */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		6D8F7ECD2CC9047300A7F194 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				6D8F7EC72CC8F95900A7F194 /* CustomFont.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		6D8F7ED72CC91E7900A7F194 /* Primary Button */ = {
+			isa = PBXGroup;
+			children = (
+				6D8F7EE92CC94A3A00A7F194 /* PrimaryButton.swift */,
+				6D8F7EED2CC94E9800A7F194 /* PrimaryButton.Appearance.swift */,
+				6D8F7EEB2CC94A8300A7F194 /* PrimaryButton.Width.swift */,
+			);
+			path = "Primary Button";
+			sourceTree = "<group>";
+		};
+		6D8F7EDA2CC91F7100A7F194 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6D9B9DD72CCA5C7E00FCF58B /* CardType.swift */,
+				6D8F7EE62CC948FF00A7F194 /* Configurable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6D8F7EDD2CC9238700A7F194 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				6D9B9DDA2CCA5E4500FCF58B /* Tag.swift */,
+				6D9B9DD32CCA5BB000FCF58B /* TopCardType.swift */,
+				6D9B9DD12CCA5BA400FCF58B /* CentreCardType.swift */,
+				6D9B9DCF2CCA5A0400FCF58B /* BottomCardType.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		6D9B9DDE2CCA6DF800FCF58B /* Primary Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				6D9B9DDC2CCA6DE700FCF58B /* PrimaryTextField.swift */,
+			);
+			path = "Primary Text Field";
 			sourceTree = "<group>";
 		};
 		6DAD24292C96FDA8009CE12B /* Frameworks */ = {
@@ -122,7 +203,8 @@
 		6DC8D34A29AEC648005FF18C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				6DC0834F29ACA3400031481C /* Assets.xcassets */,
+				6D8F7EC12CC8F07B00A7F194 /* Colors.xcassets */,
+				6DC0834F29ACA3400031481C /* Images.xcassets */,
 				6DC8D34B29AEC65B005FF18C /* Fonts */,
 				6DC8D39729AEC80E005FF18C /* Info.plist */,
 			);
@@ -132,54 +214,18 @@
 		6DC8D34B29AEC65B005FF18C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				6DC8D34F29AEC6C4005FF18C /* Inter */,
-				6DC8D34E29AEC6AB005FF18C /* Satoshi */,
-				6DC8D34D29AEC6A2005FF18C /* Open Sans */,
-				6DC8D34C29AEC699005FF18C /* Space Grotesk */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		6DC8D34C29AEC699005FF18C /* Space Grotesk */ = {
-			isa = PBXGroup;
-			children = (
-				6DC8D38D29AEC7F4005FF18C /* SpaceGrotesk-Bold.ttf */,
-			);
-			path = "Space Grotesk";
-			sourceTree = "<group>";
-		};
-		6DC8D34D29AEC6A2005FF18C /* Open Sans */ = {
-			isa = PBXGroup;
-			children = (
-				6DC8D37F29AEC7D7005FF18C /* OpenSans-Bold.ttf */,
-				6DC8D37B29AEC7D7005FF18C /* OpenSans-Regular.ttf */,
-			);
-			path = "Open Sans";
-			sourceTree = "<group>";
-		};
-		6DC8D34E29AEC6AB005FF18C /* Satoshi */ = {
-			isa = PBXGroup;
-			children = (
-				6DC8D36529AEC7A3005FF18C /* Satoshi-Black.otf */,
-				6DC8D36829AEC7A3005FF18C /* Satoshi-Bold.otf */,
-				6DC8D36B29AEC7A3005FF18C /* Satoshi-Regular.otf */,
-			);
-			path = Satoshi;
-			sourceTree = "<group>";
-		};
-		6DC8D34F29AEC6C4005FF18C /* Inter */ = {
-			isa = PBXGroup;
-			children = (
 				6DC8D35429AEC77E005FF18C /* Inter-Bold.ttf */,
-				6DC8D35929AEC77E005FF18C /* Inter-SemiBold.ttf */,
 				6DC8D35529AEC77E005FF18C /* Inter-Regular.ttf */,
 			);
-			path = Inter;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		6DD1EBFF2CC8E81600594EAC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				6D8F7EC52CC8F91D00A7F194 /* UI Components */,
+				6D8F7EDD2CC9238700A7F194 /* Enumerations */,
+				6D8F7EDA2CC91F7100A7F194 /* Protocols */,
 				6D4C04B629AECCD000165FC2 /* Extensions */,
 			);
 			path = Helpers;
@@ -249,16 +295,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC0835029ACA3400031481C /* Assets.xcassets in Resources */,
-				6DC8D36F29AEC7A3005FF18C /* Satoshi-Black.otf in Resources */,
+				6DC0835029ACA3400031481C /* Images.xcassets in Resources */,
+				6D8F7EC22CC8F07B00A7F194 /* Colors.xcassets in Resources */,
 				6DC8D35E29AEC77E005FF18C /* Inter-Regular.ttf in Resources */,
-				6DC8D39229AEC7F4005FF18C /* SpaceGrotesk-Bold.ttf in Resources */,
-				6DC8D37229AEC7A3005FF18C /* Satoshi-Bold.otf in Resources */,
-				6DC8D36229AEC77E005FF18C /* Inter-SemiBold.ttf in Resources */,
-				6DC8D37529AEC7A3005FF18C /* Satoshi-Regular.otf in Resources */,
 				6DC8D35D29AEC77E005FF18C /* Inter-Bold.ttf in Resources */,
-				6DC8D38929AEC7D7005FF18C /* OpenSans-Bold.ttf in Resources */,
-				6DC8D38529AEC7D7005FF18C /* OpenSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,14 +309,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8F7EE72CC9490600A7F194 /* Configurable.swift in Sources */,
+				6D9B9DCE2CC95AFC00FCF58B /* ItemCard.swift in Sources */,
+				6D9B9DDB2CCA5E4900FCF58B /* Tag.swift in Sources */,
+				6D8F7EEE2CC94E9A00A7F194 /* PrimaryButton.Appearance.swift in Sources */,
+				6D8F7EE02CC9254900A7F194 /* ButtonIcon.swift in Sources */,
 				6D4C04B829AECCEA00165FC2 /* Font++.swift in Sources */,
+				6D9B9DDD2CCA6DF000FCF58B /* PrimaryTextField.swift in Sources */,
+				6D8F7EEC2CC94A8700A7F194 /* PrimaryButton.Width.swift in Sources */,
 				6D4C04BC29AED11E00165FC2 /* UIScreen++.swift in Sources */,
+				6D8F7ED92CC91F5500A7F194 /* BrandingContent.swift in Sources */,
+				6D9B9DD02CCA5A0B00FCF58B /* BottomCardType.swift in Sources */,
 				6DA1411B29AF720C00A3DC0A /* View++.swift in Sources */,
 				6DC0834E29ACA33E0031481C /* ContentView.swift in Sources */,
+				6D8F7EE42CC929C400A7F194 /* SocialMediaView.swift in Sources */,
 				6D4C04C229AED7D900165FC2 /* String++.swift in Sources */,
+				6D8F7EC82CC8F95F00A7F194 /* CustomFont.swift in Sources */,
 				6DC0834C29ACA33E0031481C /* PopupView_Main.swift in Sources */,
 				6D4C04C029AED6E400165FC2 /* Spacer++.swift in Sources */,
+				6D9B9DD22CCA5BA600FCF58B /* CentreCardType.swift in Sources */,
+				6D8F7ED42CC91C8300A7F194 /* Icon.swift in Sources */,
+				6D8F7EEA2CC94A3E00A7F194 /* PrimaryButton.swift in Sources */,
+				6D9B9DD42CCA5BB200FCF58B /* TopCardType.swift in Sources */,
 				6D4C04BA29AECCEF00165FC2 /* Color++.swift in Sources */,
+				6D9B9DD82CCA5C8000FCF58B /* CardType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,13 +11,22 @@
 import SwiftUI
 
 extension Color {
-    static let primary: Color = .init(hex: 0x388091)
-    static let secondary: Color = .init(hex: 0xE66460)
-    static let onBackgroundPrimary: Color = .init(hex: 0x252525)
-    static let onBackgroundSecondary: Color = .init(hex: 0x6F7278)
-    static let onBackgroundTertiary: Color = .init(hex: 0xEEF1F7)
-}
-
-private extension Color {
-    init(hex: UInt) { self.init(.sRGB, red: Double((hex >> 16) & 0xff) / 255, green: Double((hex >> 08) & 0xff) / 255, blue: Double((hex >> 00) & 0xff) / 255, opacity: 1) }
+    static let textPrimary: Color = .init(.textPrimary)
+    static let textSecondary: Color = .init(.textSecondary)
+    static let textTertiary: Color = .init(.textTertiary)
+    static let textQuaternary: Color = .init(.textQuaternary)
+    static let textBrand: Color = .init(.textBrand)
+    
+    static let backgroundPrimary: Color = .init(.backgroundPrimary)
+    static let backgroundSecondary: Color = .init(.backgroundSecondary)
+    static let backgroundSecondary50: Color = .init(.backgroundSecondary50)
+    static let backgroundTertiary: Color = .init(.backgroundTertiary)
+    static let backgroundQuaternary: Color = .init(.backgroundQuaternary)
+    static let backgroundInverted: Color = .init(.backgroundInverted)
+    static let backgroundBrand: Color = .init(.backgroundBrand)
+    static let backgroundError: Color = .init(.backgroundError)
+    
+    static let borderPrimary: Color = .init(.borderPrimary)
+    static let borderSecondary: Color = .init(.borderSecondary)
+    static let borderTertiary: Color = .init(.borderTertiary)
 }

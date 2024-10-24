@@ -12,10 +12,13 @@ import SwiftUI
 
 // MARK: -iOS & tvOS Implementation
 #if os(iOS) || os(tvOS)
-class Screen {
-    @MainActor static var safeArea: UIEdgeInsets = UIScreen.safeArea
+@MainActor class Screen {
+    static var safeArea: UIEdgeInsets = UIScreen.safeArea
+    static var width: CGFloat { UIScreen.main.bounds.size.width }
+    static var height: CGFloat { UIScreen.main.bounds.size.height }
 }
-fileprivate extension UIScreen {
+
+private extension UIScreen {
     static var safeArea: UIEdgeInsets {
         UIApplication.shared
             .connectedScenes
@@ -26,17 +29,31 @@ fileprivate extension UIScreen {
     }
 }
 
-
 // MARK: - macOS Implementation
 #elseif os(macOS)
-class Screen {
+@MainActor class Screen {
     static var safeArea: NSEdgeInsets = NSScreen.safeArea
+    static var width: CGFloat { NSScreen.width }
+    static var height: CGFloat { NSScreen.height }
 }
 fileprivate extension NSScreen {
-    static var safeArea: NSEdgeInsets =
+    @MainActor static var safeArea: NSEdgeInsets =
     NSApplication.shared
         .mainWindow?
         .contentView?
         .safeAreaInsets ?? .init(top: 0, left: 0, bottom: 0, right: 0)
+    
+    @MainActor static var width: CGFloat {
+        NSApplication.shared
+            .mainWindow?
+            .contentView?
+            .frame.size.width ?? .zero
+    }
+    @MainActor static var height: CGFloat {
+        NSApplication.shared
+            .mainWindow?
+            .contentView?
+            .frame.size.height ?? .zero
+    }
 }
 #endif
