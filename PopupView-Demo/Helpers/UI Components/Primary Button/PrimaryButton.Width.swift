@@ -3,6 +3,9 @@
 //  MijickPopups-Demo
 //
 //  Created by Alina Petrovska on 23.10.2024.
+//    - Mail: alina.petrovskaya@mijick.com
+//
+//  Copyright ©2023 Mijick. Licensed under MIT License.
 //
 
 import SwiftUI
@@ -14,9 +17,9 @@ extension PrimaryButton {
 extension PrimaryButton.Width {
     var value: CGFloat? {
         switch self {
-            case .full: return Screen.width
-            case .narrow(let value): return value
-            case .flexible: return nil
+            case .full: Screen.width
+            case .narrow(let value): value
+            case .flexible: nil
         }
     }
 }

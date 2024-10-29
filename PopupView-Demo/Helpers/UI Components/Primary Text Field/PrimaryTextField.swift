@@ -3,6 +3,9 @@
 //  MijickPopups-Demo
 //
 //  Created by Alina Petrovska on 24.10.2024.
+//    - Mail: alina.petrovskaya@mijick.com
+//
+//  Copyright ©2023 Mijick. Licensed under MIT License.
 //
 
 import SwiftUI
@@ -11,6 +14,11 @@ struct PrimaryTextField: View {
     @State private var text: String = ""
     let title: String
     let placeholder: String
+    
+    init(title: String = "Email", placeholder: String = "team@mijick.com") {
+        self.title = title
+        self.placeholder = placeholder
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -71,8 +79,4 @@ fileprivate extension View {
             self
         }
     }
-}
-
-#Preview {
-    PrimaryTextField(title: "Dupa", placeholder: "Ty dupa")
 }

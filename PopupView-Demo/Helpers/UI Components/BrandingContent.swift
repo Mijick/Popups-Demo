@@ -3,12 +3,15 @@
 //  MijickPopups-Demo
 //
 //  Created by Alina Petrovska on 23.10.2024.
+//    - Mail: alina.petrovskaya@mijick.com
+//
+//  Copyright ©2023 Mijick. Licensed under MIT License.
 //
 
 import SwiftUI
 
 struct BrandingContent: View, Configurable {
-    @State var isVisibleSocialMedia: Bool = true
+    private var isVisibleSocialMedia: Bool = true
     
     var body: some View {
         VStack(spacing: 20) {
@@ -30,7 +33,7 @@ private extension BrandingContent {
         }
     }
     func createSocialButtons() -> some View {
-        SocialMediaView()
+        SocialMediaView().active(if: isVisibleSocialMedia)
     }
 }
 
@@ -48,5 +51,5 @@ private extension BrandingContent {
 
 // MARK: Configuration
 extension BrandingContent {
-    func changeSocialMediaVisibility(_ isVisible: Bool) -> Self { configure(path: \.isVisibleSocialMedia, isVisible) }
+    func isVisibleSocialMediaButtons(_ isVisible: Bool) -> Self { configure(path: \.isVisibleSocialMedia, isVisible) }
 }

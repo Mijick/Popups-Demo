@@ -3,10 +3,13 @@
 //  MijickPopups-Demo
 //
 //  Created by Alina Petrovska on 24.10.2024.
+//    - Mail: alina.petrovskaya@mijick.com
+//
+//  Copyright ©2023 Mijick. Licensed under MIT License.
 //
 
 enum CentreCardType: String, CardType, CaseIterable {
-    case resizable, stack, textField
+    case alert, stack, textField, resizable
 }
 
 extension CentreCardType {
@@ -17,9 +20,10 @@ extension CentreCardType {
 extension CentreCardType {
     var title: String {
         switch self {
-            case .resizable: return "Resizable"
-            case .stack: return "Stack"
-            case .textField: return "Text Field"
+            case .resizable: "Resizable"
+            case .stack: "Stack"
+            case .textField: "Text Field"
+            case .alert: "Alert"
         }
     }
 }
@@ -27,9 +31,10 @@ extension CentreCardType {
 extension CentreCardType {
     var description: String {
         switch self {
-            case .resizable: return ""
-            case .stack: return ""
-            case .textField: return ""
+            case .resizable: ""
+            case .stack: ""
+            case .textField: ""
+            case .alert: ""
         }
     }
 }

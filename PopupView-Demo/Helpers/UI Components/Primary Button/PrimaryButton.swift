@@ -3,6 +3,9 @@
 //  MijickPopups-Demo
 //
 //  Created by Alina Petrovska on 23.10.2024.
+//    - Mail: alina.petrovskaya@mijick.com
+//
+//  Copyright ©2023 Mijick. Licensed under MIT License.
 //
 
 import SwiftUI
@@ -25,7 +28,7 @@ private extension PrimaryButton {
     func createButtonLabel() -> some View {
         createBody()
             .frame(maxWidth: .infinity)
-            .frame(width: config.width.value, height: config.height)
+            .frame(height: config.height.value)
             .rectangleBackground(config.backgroundColor, config.cornerRadius)
     }
 }
@@ -33,7 +36,7 @@ private extension PrimaryButton {
 private extension PrimaryButton {
     func createBody() -> some View {
         Text(text)
-            .font(config.appearance.font)
+            .font(config.height.font)
             .foregroundColor(config.appearance.textColour)
             .animation(nil, value: text)
     }
@@ -43,13 +46,12 @@ private extension PrimaryButton {
 extension PrimaryButton {
     @MainActor struct Config {
         var appearance: Appearance = .accented
-        var width: Width = .full
-        var height: CGFloat { appearance.height }
-        var cornerRadius: CGFloat { appearance.cornerRadius }
+        var height: Height = .big
+        var cornerRadius: CGFloat { height.cornerRadius }
         var backgroundColor: Color { appearance.backgroundColor }
     }
 
-    func setWidth(to width: Width) -> Self { configure(path: \.config.width, width) }
+    func setHeight(to height: Height) -> Self { configure(path: \.config.height, height) }
     func changeAppearance(to appearance: Appearance) -> Self { configure(path: \.config.appearance, appearance) }
 }
 

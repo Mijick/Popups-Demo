@@ -9,17 +9,20 @@
 
 
 import SwiftUI
+import MijickPopups
 
 struct ContentView: View {
     var body: some View {
-        ScrollView(showsIndicators: false, content: createContent).preferredColorScheme(.light)
+        createContent()
     }
 }
 
 private extension ContentView {
     func createContent() -> some View {
         VStack(spacing: 10) {
-           
+            PrimaryButton("sddd") {
+                TopPopupPresenter(card: .variousOverlays).present()
+            }
         }
         .padding(.top, 40)
         .padding(.bottom, 32)

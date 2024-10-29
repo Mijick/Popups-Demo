@@ -29,4 +29,9 @@ extension Color {
     static let borderPrimary: Color = .init(.borderPrimary)
     static let borderSecondary: Color = .init(.borderSecondary)
     static let borderTertiary: Color = .init(.borderTertiary)
+    
+    static let overlayPrimary: Color = .init(.primaryOverlay)
+    static let overlayBlue: Color = .init(.blueOverlay)
+    static let overlayGreen: Color = .init(.greenOverlay)
+    static let overlayPurple: Color = .init(.purpleOverlay)
 }

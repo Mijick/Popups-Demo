@@ -3,10 +3,13 @@
 //  MijickPopups-Demo
 //
 //  Created by Alina Petrovska on 24.10.2024.
+//    - Mail: alina.petrovskaya@mijick.com
+//
+//  Copyright ©2023 Mijick. Licensed under MIT License.
 //
 
 enum TopCardType: String, CardType, CaseIterable {
-    case autoHeight, dragDetent, fullscreenTextField, fullscreen, paddings, stack, textField, variousOverlays
+    case autoHeight, stack, textField, dragDetent, fullscreenTextField, fullscreen, paddings, variousOverlays
 }
 
 extension TopCardType {

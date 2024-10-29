@@ -13,6 +13,19 @@ import MijickPopups
 
 @main struct PopupView_Main: App {
     var body: some Scene { WindowGroup {
-        ContentView()
+        ContentView().registerPopups()
+        { container in
+            container.centre {
+                $0.backgroundColor(.backgroundSecondary)
+                  .cornerRadius(20)
+                  .popupHorizontalPadding(20)
+                  .tapOutsideToDismissPopup(true)
+            }
+            .vertical {
+                $0.backgroundColor(.backgroundSecondary)
+                  .cornerRadius(20)
+                  .enableStacking(true)
+            }
+        }
     }}
 }
