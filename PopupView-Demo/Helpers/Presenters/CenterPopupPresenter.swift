@@ -30,6 +30,7 @@ private extension CenterPopupPresenter {
     func presentAlertPopup() {
         let viewModel = ViewModel()
         viewModel.setButtonAppearance(.horizontal)
+        viewModel.setButtons([.openGitHub, .dismiss])
         
         CentrePopupView(viewModel).present()
     }
@@ -50,6 +51,7 @@ private extension CenterPopupPresenter {
     func presentTextFieldPopup() {
         let viewModel = ViewModel()
         viewModel.showTextField(true)
+        viewModel.setButtons([.openGitHub, .dismiss])
         
         CentrePopupView(viewModel).present()
     }

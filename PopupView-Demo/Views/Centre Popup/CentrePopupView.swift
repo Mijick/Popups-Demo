@@ -32,7 +32,7 @@ struct CentrePopupView: CentrePopup {
 private extension CentrePopupView {
     func brandingContent() -> some View {
         BrandingContent()
-            .isVisibleSocialMediaButtons(false)
+            .hideSocialMedia(true)
             .padding(.bottom, 24)
     }
     func createTextField() -> some View {
@@ -70,8 +70,8 @@ private extension CentrePopupView {
 }
 
 private extension CentrePopupView {
-    func createButton(_ item: Buttons) -> some View {
-        item
+    func createButton(_ button: Buttons) -> some View {
+        button
             .getView()
             .setHeight(to: .small)
     }

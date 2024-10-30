@@ -11,9 +11,26 @@
 import SwiftUI
 
 struct BrandingContent: View, Configurable {
-    private var isVisibleSocialMedia: Bool = true
+    private var isHiddenSocialMedia: Bool = false
+    private var appearance: Appearance = .nonCompact
     
-    var body: some View {
+    var body: some View { createContent() }
+}
+
+private extension BrandingContent {
+    @ViewBuilder func createContent() -> some View {
+        switch appearance {
+            case .compact: createCompactContent()
+            case .nonCompact: createNonCompactContent()
+        }
+    }
+}
+
+private extension BrandingContent {
+    func createCompactContent() -> some View {
+        Icon(.logoClean, size: 60)
+    }
+    func createNonCompactContent() -> some View {
         VStack(spacing: 20) {
             createLogo()
             createMadeByContent()
@@ -33,7 +50,7 @@ private extension BrandingContent {
         }
     }
     func createSocialButtons() -> some View {
-        SocialMediaView().active(if: isVisibleSocialMedia)
+        SocialMediaView().active(if: !isHiddenSocialMedia)
     }
 }
 
@@ -51,5 +68,11 @@ private extension BrandingContent {
 
 // MARK: Configuration
 extension BrandingContent {
-    func isVisibleSocialMediaButtons(_ isVisible: Bool) -> Self { configure(path: \.isVisibleSocialMedia, isVisible) }
+    func hideSocialMedia(_ isHidden: Bool) -> Self { configure(path: \.isHiddenSocialMedia, isHidden) }
+    func setAppearance(_ value: Appearance) -> Self { configure(path: \.appearance, value) }
+}
+
+// MARK: Appearance
+extension BrandingContent {
+    enum Appearance { case compact, nonCompact }
 }

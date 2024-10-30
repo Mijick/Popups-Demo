@@ -15,7 +15,7 @@ extension CentrePopupView {
     @MainActor class ViewModel: ObservableObject {
         @Published private(set) var topPadding: CGFloat = 28
         @Published private(set) var bottomPadding: CGFloat = 20
-        @Published private(set) var buttons: [Buttons] = [.openGitHub, .dismiss]
+        @Published private(set) var buttons: [Buttons] = []
         @Published private(set) var buttonsAppearance: ButtonAppearance = .vertical
         @Published private(set) var showTextView = false
         @Published private(set) var showTextField = false

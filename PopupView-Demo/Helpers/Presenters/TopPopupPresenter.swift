@@ -31,7 +31,7 @@ extension TopPopupPresenter {
 private extension TopPopupPresenter {
     func presentAutoHeight() {
         let viewModel = ViewModel()
-            .setAppearance(.compact)
+            .setBrandingAppearance(.compact)
             .setButtons([])
             .setCornerRadius(0)
         
@@ -88,7 +88,7 @@ private extension TopPopupPresenter {
     func presentPaddings() {
         let viewModel = ViewModel()
             .setButtons([])
-            .setAppearance(.compact)
+            .setBrandingAppearance(.compact)
             .setTopPadding(Screen.safeArea.top + 8)
             .setHorizontalPaddings(12)
             .setCornerRadius(20)
@@ -102,7 +102,7 @@ private extension TopPopupPresenter {
     func presentStackFlow() {
         let viewModel = ViewModel()
             .setButtons([.presentNextPopup(present2Stack), .dismiss])
-            .setAppearance(.compact)
+            .setBrandingAppearance(.compact)
             .setTopPadding(Screen.safeArea.top)
             .setHorizontalPaddings(12)
             .setCornerRadius(20)
@@ -112,7 +112,7 @@ private extension TopPopupPresenter {
     func present2Stack() {
         let viewModel = ViewModel()
             .setButtons([.presentNextPopup(present3Stack), .dismiss])
-            .setAppearance(.compact)
+            .setBrandingAppearance(.compact)
             .setCornerRadius(0)
         
         TopPopupView(viewModel)
@@ -176,7 +176,7 @@ private extension TopPopupPresenter {
     }
     func present3OverlayPopup() {
         let viewModel = ViewModel()
-            .setButtons([.presentNextPopup { }, .dismiss])
+            .setButtons([.dismiss])
             .setOverlayColor(.overlayPurple)
         
         TopPopupView(viewModel)

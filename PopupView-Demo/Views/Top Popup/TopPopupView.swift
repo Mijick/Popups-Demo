@@ -17,16 +17,15 @@ struct TopPopupView: TopPopup {
     
     var body: some View {
         VStack(spacing: 0) {
-            createNonCompactBrandingContent()
-            createCompactBrandingContent()
+            createBrandingContent()
             createSpacer()
             createTextField()
             createButtons()
             createDragIndicator()
         }
-        .padding(.horizontal, viewModel.appearance.horizontalPadding)
-        .padding(.top, viewModel.appearance.topPadding)
-        .padding(.bottom, viewModel.appearance.bottomPadding)
+        .padding(.horizontal, viewModel.horizontalPadding)
+        .padding(.top, viewModel.topPadding)
+        .padding(.bottom, viewModel.bottomPadding)
     }
     func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
         config
@@ -40,15 +39,10 @@ struct TopPopupView: TopPopup {
 }
 
 private extension TopPopupView {
-    func createNonCompactBrandingContent() -> some View {
+    func createBrandingContent() -> some View {
         BrandingContent()
+            .setAppearance(viewModel.brandingAppearance)
             .padding(.bottom, 32)
-            .active(if: viewModel.appearance == .nonCompact)
-    }
-    func createCompactBrandingContent() -> some View {
-        Icon(.logoClean, size: 60)
-            .padding(.bottom, 24)
-            .active(if: viewModel.appearance == .compact)
     }
     @ViewBuilder func createSpacer() -> some View {
         if viewModel.showSpacer { Spacer.width(40).background(Color.red) }
@@ -73,8 +67,8 @@ private extension TopPopupView {
 }
 
 private extension TopPopupView {
-    func createButton(_ item: Buttons) -> some View {
-        item
+    func createButton(_ button: Buttons) -> some View {
+        button
             .getView()
             .setHeight(to: viewModel.buttonHeight)
     }
