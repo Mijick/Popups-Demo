@@ -10,6 +10,11 @@
 
 @MainActor struct BottomPopupPresenter {
     let card: BottomCardType
+    
+    init?(_ card: CardType) {
+        guard let card = card as? BottomCardType else { return nil }
+        self.card = card
+    }
 }
 
 extension BottomPopupPresenter {
@@ -53,7 +58,7 @@ private extension BottomPopupPresenter {
 
 // MARK: Drag Detent
 private extension BottomPopupPresenter {
-    func presentDragDetent() {
+    func presentDragDetent() { // TODO: Check here
         let viewModel = ViewModel()
             .setDragPoints([.fraction(1.4), .large])
         

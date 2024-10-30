@@ -12,6 +12,11 @@ import Foundation
 
 @MainActor struct CenterPopupPresenter {
     let card: CentreCardType
+    
+    init?(_ card: CardType) {
+        guard let card = card as? CentreCardType else { return nil }
+        self.card = card
+    }
 }
 
 extension CenterPopupPresenter {

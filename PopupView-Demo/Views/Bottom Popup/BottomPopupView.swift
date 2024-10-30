@@ -59,8 +59,8 @@ private extension BottomPopupView {
     }
     func createTextField() -> some View {
         PrimaryTextField()
-            .padding(.bottom, 12)
-            .padding(.top, 20)
+            .padding(.bottom, -8)
+            .padding(.top, 12)
             .active(if: viewModel.showTextField)
     }
     func createText() -> some View {
@@ -78,6 +78,7 @@ private extension BottomPopupView {
             ForEach(viewModel.buttons, id: \.title, content: createButton)
         }
         .padding(.top, 16)
+        .padding(.bottom, 8)
     }
 }
 

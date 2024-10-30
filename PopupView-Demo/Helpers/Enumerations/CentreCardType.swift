@@ -31,10 +31,10 @@ extension CentreCardType {
 extension CentreCardType {
     var description: String {
         switch self {
-            case .resizable: ""
-            case .stack: ""
-            case .textField: ""
-            case .alert: ""
+            case .resizable: "A center popup view that allows users to change its size dynamically with a button tap"
+            case .stack: "Allows to present several popup views arranged in a stacked formation"
+            case .textField: "A center popup that contains a text field, designed to demonstrate keyboard behavior upon activation"
+            case .alert: "A center popup view designed to resemble an alert dialog"
         }
     }
 }

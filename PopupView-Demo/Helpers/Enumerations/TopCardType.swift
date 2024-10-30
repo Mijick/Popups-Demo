@@ -36,14 +36,14 @@ extension TopCardType {
 extension TopCardType {
     var description: String {
         switch self {
-            case .autoHeight: return ""
-            case .dragDetent: return ""
-            case .fullscreenTextField: return ""
-            case .fullscreen: return ""
-            case .paddings: return ""
-            case .stack: return ""
-            case .textField: return ""
-            case .variousOverlays: return ""
+            case .autoHeight: return "A top popup view that automatically adjusts its height based on the content within it."
+            case .dragDetent: return "A top popup supports drag-and-drop interactions, allowing users to move or rearrange items within the popup"
+            case .fullscreenTextField: return "A top popup that contains a text field, designed to demonstrate keyboard behavior upon activation"
+            case .fullscreen: return "A top popup expands to fullscreen even if the content is minimal"
+            case .paddings: return "A top popup appears with customizable padding from the screen edges"
+            case .stack: return "Allows to present several popup views arranged in a stacked formation to demonstrate layered popups"
+            case .textField: return "A top popup that contains a text field, designed to demonstrate keyboard behavior upon activation"
+            case .variousOverlays: return "Provides an ability to present several popup views, each with its own specific overlay color."
         }
     }
 }

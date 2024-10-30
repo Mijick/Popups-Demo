@@ -41,7 +41,7 @@ extension BottomPopupView.ViewModel {
 
 extension BottomPopupView.ViewModel {
     var showSpacer: Bool { spacerHeight != nil || heightMode != .auto || !dragPoints.isEmpty }
-    var ignoreSafeArea: Edge.Set { showTextField ? [.bottom] : [] }
+    var ignoreSafeArea: Edge.Set { showTextView ? [.bottom] : [] }
     var isActiveDragIndicator: Bool { !dragPoints.isEmpty }
     var isActiveScrolling: Bool { showTextView }
 }

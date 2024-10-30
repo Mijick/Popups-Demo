@@ -6,6 +6,7 @@
 //    - Mail: alina.petrovskaya@mijick.com
 //
 //  Copyright ©2023 Mijick. Licensed under MIT License.
+//
 
 import SwiftUI
 import MijickPopups

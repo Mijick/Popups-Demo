@@ -37,16 +37,16 @@ extension BottomCardType {
 extension BottomCardType {
     var description: String {
         switch self {
-            case .autoDismiss: return ""
-            case .autoHeight: return ""
-            case .dragDetent: return ""
-            case .fullscreen: return ""
-            case .large: return ""
-            case .noOverlay: return ""
-            case .paddings: return ""
-            case .scrollable: return ""
-            case .stack: return ""
-            case .textField: return ""
+            case .autoDismiss: return "A bottom popup appears at the bottom of the screen and automatically dismisses itself after 2 seconds"
+            case .autoHeight: return "A bottom popup automatically adjusts its height based on the content within it"
+            case .dragDetent: return "A bottom popup supports drag-and-drop interactions, allowing users to move or rearrange items within the popup"
+            case .fullscreen: return "A bottom popup expands to fullscreen even if the content is minimal"
+            case .large: return "A bottom popup expands to take up the entire height of the screen, even if the content is minimal"
+            case .noOverlay: return "A bottom popup appears without an overlay color, allowing the underlying screen content to remain fully visible"
+            case .paddings: return "A bottom popup appears with customizable padding from the screen edges"
+            case .scrollable: return "A bottom popup view that supports scrollable content"
+            case .stack: return "Allows to present several popup views arranged in a stacked formation to demonstrate layered popups"
+            case .textField: return "A bottom popup view containing a text field, designed to demonstrate keyboard behavior upon activation"
         }
     }
 }
