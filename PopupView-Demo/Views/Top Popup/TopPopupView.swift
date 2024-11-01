@@ -25,15 +25,13 @@ struct TopPopupView: TopPopup {
             createDragIndicator()
         }
         .padding(.horizontal, viewModel.horizontalPadding)
-        .padding(.top, viewModel.topPadding)
-        .padding(.bottom, viewModel.bottomPadding)
     }
     func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
         config
             .dragDetents(viewModel.dragPoints)
             .cornerRadius(viewModel.cornerRadius)
-            .popupHorizontalPadding(viewModel.outerHorizontalPadding)
-            .popupTopPadding(viewModel.outerTopPadding)
+            .popupHorizontalPadding(viewModel.popupHorizontalPadding)
+            .popupTopPadding(viewModel.popupTopPadding)
             .overlayColor(viewModel.overlayColor)
             .heightMode(viewModel.heightMode)
     }
@@ -43,26 +41,29 @@ private extension TopPopupView {
     func createBrandingContent() -> some View {
         BrandingContent()
             .setAppearance(viewModel.brandingAppearance)
-            .padding(.bottom, 32)
+            .padding(.top, viewModel.topPadding)
+            .padding(.bottom, viewModel.bottomPadding)
     }
     @ViewBuilder func createSpacer() -> some View {
-        if viewModel.showSpacer { Spacer.width(40).background(Color.red) }
+        if viewModel.showSpacer { Spacer() }
     }
     func createTextField() -> some View {
         PrimaryTextField()
             .padding(.bottom, 12)
-            .padding(.top, 12)
+            .padding(.top, 24)
             .active(if: viewModel.showTextField)
     }
     func createButtons() -> some View {
         VStack(spacing: 8) {
             ForEach(viewModel.buttons, id: \.title, content: createButton)
         }
+        .padding(.bottom, 20)
+        .active(if: !viewModel.buttons.isEmpty)
     }
     func createDragIndicator() -> some View {
         DragIndicator()
-            .padding(.top, 24)
-            .padding(.bottom, -4)
+            .padding(.top, 12)
+            .padding(.bottom, 16)
             .active(if: !viewModel.dragPoints.isEmpty)
     }
 }

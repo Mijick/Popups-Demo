@@ -55,10 +55,7 @@ private extension ContentView {
     func createSection(_ cards: [CardType], section name: String) -> some View {
         VStack(alignment: .leading, spacing: 20) {
             createSectionHeader(name)
-            HStack(alignment: .top, spacing: viewModel.itemsDistance) {
-                createSectionContent(viewModel.getEvenElements(cards))
-                createSectionContent(viewModel.getOddElements(cards))
-            }
+            createSectionContent(cards)
         }
     }
 }
@@ -70,7 +67,16 @@ private extension ContentView {
             .foregroundStyle(Color.textPrimary)
     }
     func createSectionContent(_ cards: [CardType]) -> some View {
-        VStack(alignment: .leading, spacing: viewModel.itemsDistance) {
+        HStack(alignment: .top, spacing: viewModel.itemsDistance) {
+            createSectionRows(viewModel.getEvenElements(cards))
+            createSectionRows(viewModel.getOddElements(cards))
+        }
+    }
+}
+
+private extension ContentView {
+    func createSectionRows(_ cards: [CardType]) -> some View {
+        LazyVStack(alignment: .leading, spacing: viewModel.itemsDistance) {
             ForEach(cards, id: \.title, content: createRowItem)
         }
     }

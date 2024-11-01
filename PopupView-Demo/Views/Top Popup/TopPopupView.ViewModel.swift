@@ -12,31 +12,32 @@ import SwiftUI
 import MijickPopups
 
 extension TopPopupView {
-    @MainActor class ViewModel: ObservableObject, Configurable {
-        @Published private(set) var brandingAppearance: BrandingContent.Appearance = .nonCompact
-        @Published private(set) var outerHorizontalPadding: CGFloat = 0
-        @Published private(set) var outerTopPadding: CGFloat = 0
-        @Published private(set) var buttons: [Buttons] = []
-        @Published private(set) var overlayColor: Color = .overlayPrimary
-        @Published private(set) var dragPoints: [DragDetent] = []
-        @Published private(set) var showTextField: Bool = false
-        @Published private(set) var buttonHeight: PrimaryButton.Height = .small
-        @Published private(set) var cornerRadius: CGFloat = 24
-        @Published private(set) var heightMode: HeightMode = .auto
+    @MainActor class ViewModel: ObservableObject, ClassConfigurable {
+        var brandingAppearance: BrandingContent.Appearance = .nonCompact
+        var popupHorizontalPadding: CGFloat = 0
+        var popupTopPadding: CGFloat = 0
+        var buttons: [Buttons] = []
+        var overlayColor: Color = .overlayPrimary
+        var dragPoints: [DragDetent] = []
+        var showTextField: Bool = false
+        var buttonHeight: PrimaryButton.Height = .small
+        var cornerRadius: CGFloat = 24
+        var heightMode: HeightMode = .auto
     }
 }
 
 extension TopPopupView.ViewModel {
-    func setButtons(_ value: [Buttons]) -> Self { buttons = value; return self }
-    func setBrandingAppearance(_ value: BrandingContent.Appearance) -> Self { brandingAppearance = value; return self }
-    func setHorizontalPaddings(_ value: CGFloat) -> Self { outerHorizontalPadding = value; return self }
-    func setTopPadding(_ value: CGFloat) -> Self { outerTopPadding = value; return self }
-    func setOverlayColor(_ value: Color) -> Self { overlayColor = value; return self }
-    func setDragPoints(_ value: [DragDetent]) -> Self { dragPoints = value; return self }
-    func isShowTextField(_ value: Bool) -> Self { showTextField = value; return self  }
-    func setButtonHeight(_ value: PrimaryButton.Height) -> Self { buttonHeight = value; return self }
-    func setCornerRadius(_ value: CGFloat) -> Self { cornerRadius = value; return self }
-    func setHeightMode(_ value: HeightMode) -> Self { heightMode = value; return self }
+    func setButtons(_ value: [Buttons]) -> Self { configure(path: \.buttons, value) }
+    func setBrandingAppearance(_ value: BrandingContent.Appearance) -> Self {
+        configure(path: \.brandingAppearance, value) }
+    func setPopupHorizontalPaddings(_ value: CGFloat) -> Self { configure(path: \.popupHorizontalPadding, value) }
+    func setPopupTopPadding(_ value: CGFloat) -> Self { configure(path: \.popupTopPadding, value) }
+    func setOverlayColor(_ value: Color) -> Self { configure(path: \.overlayColor, value) }
+    func setDragPoints(_ value: [DragDetent]) -> Self { configure(path: \.dragPoints, value) }
+    func isShowTextField(_ value: Bool) -> Self { configure(path: \.showTextField, value) }
+    func setButtonHeight(_ value: PrimaryButton.Height) -> Self { configure(path: \.buttonHeight, value) }
+    func setCornerRadius(_ value: CGFloat) -> Self { configure(path: \.cornerRadius, value) }
+    func setHeightMode(_ value: HeightMode) -> Self { configure(path: \.heightMode, value) }
 }
 
 extension TopPopupView.ViewModel {

@@ -1,5 +1,5 @@
 //
-//  CentrePopupView.ButtonAppearance.swift
+//  CentrePopupView.ButtonAppearanceDirection.swift
 //  MijickPopups-Demo
 //
 //  Created by Alina Petrovska on 28.10.2024.
@@ -10,5 +10,5 @@
 
 
 extension CentrePopupView {
-    enum ButtonAppearance { case horizontal, vertical }
+    enum ButtonAppearanceDirection { case horizontal, vertical }
 }

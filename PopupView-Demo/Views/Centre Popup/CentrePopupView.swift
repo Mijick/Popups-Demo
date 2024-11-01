@@ -12,9 +12,9 @@ import SwiftUI
 import MijickPopups
 
 struct CentrePopupView: CentrePopup {
-    @StateObject private var viewModel: ViewModel
+    @ObservedObject private var viewModel: ViewModel
     
-    init(_ viewModel: ViewModel = .init()) { _viewModel = .init(wrappedValue: viewModel) }
+    init(_ viewModel: ViewModel = .init()) { self.viewModel = viewModel }
     
     var body: some View {
         VStack(spacing: 0) {

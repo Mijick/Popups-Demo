@@ -47,7 +47,9 @@ private extension TopPopupPresenter {
 // MARK: Drag Detent
 private extension TopPopupPresenter {
     func presentDragDetent() { // TODO: Check here
-        let viewModel = ViewModel().setDragPoints([.fraction(1.4), .large])
+        let viewModel = ViewModel()
+            .setDragPoints([.fraction(1.4), .large])
+            .setButtons([.dismiss])
         
         TopPopupView(viewModel).present()
     }
@@ -57,6 +59,7 @@ private extension TopPopupPresenter {
 private extension TopPopupPresenter {
     func presentFullscreenTextField() {
         let viewModel = ViewModel()
+            .setButtons([.dismiss])
             .setHeightMode(.fullscreen)
             .isShowTextField(true)
             .setButtonHeight(.big)
@@ -72,6 +75,7 @@ private extension TopPopupPresenter {
             .isShowTextField(true)
             .setCornerRadius(20)
             .setButtonHeight(.big)
+            .setButtons([.dismiss])
         
         TopPopupView(viewModel).present()
     }
@@ -81,6 +85,7 @@ private extension TopPopupPresenter {
 private extension TopPopupPresenter {
     func presentFullscreen() {
         let viewModel = ViewModel()
+            .setButtons([.dismiss])
             .setHeightMode(.fullscreen)
             .setButtonHeight(.big)
         
@@ -92,10 +97,9 @@ private extension TopPopupPresenter {
 private extension TopPopupPresenter {
     func presentPaddings() {
         let viewModel = ViewModel()
-            .setButtons([])
             .setBrandingAppearance(.compact)
-            .setTopPadding(Screen.safeArea.top + 8)
-            .setHorizontalPaddings(12)
+            .setPopupTopPadding(Screen.safeArea.top + 8)
+            .setPopupHorizontalPaddings(12)
             .setCornerRadius(20)
         
         TopPopupView(viewModel).present()
@@ -108,8 +112,8 @@ private extension TopPopupPresenter {
         let viewModel = ViewModel()
             .setButtons([.presentNextPopup(present2Stack), .dismiss])
             .setBrandingAppearance(.compact)
-            .setTopPadding(Screen.safeArea.top)
-            .setHorizontalPaddings(12)
+            .setPopupTopPadding(Screen.safeArea.top)
+            .setPopupHorizontalPaddings(12)
             .setCornerRadius(20)
         
         TopPopupView(viewModel).present()

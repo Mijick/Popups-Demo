@@ -19,7 +19,6 @@ import MijickPopups
                 $0.backgroundColor(.backgroundSecondary)
                   .cornerRadius(20)
                   .popupHorizontalPadding(20)
-                  .tapOutsideToDismissPopup(true)
             }
             .vertical {
                 $0.backgroundColor(.backgroundSecondary)

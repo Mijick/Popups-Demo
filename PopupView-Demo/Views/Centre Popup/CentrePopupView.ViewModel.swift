@@ -12,13 +12,13 @@ import SwiftUI
 import MijickPopups
 
 extension CentrePopupView {
-    @MainActor class ViewModel: ObservableObject {
-        @Published private(set) var topPadding: CGFloat = 28
-        @Published private(set) var bottomPadding: CGFloat = 20
-        @Published private(set) var buttons: [Buttons] = []
-        @Published private(set) var buttonsAppearance: ButtonAppearance = .vertical
-        @Published private(set) var showTextView = false
-        @Published private(set) var showTextField = false
+    @MainActor class ViewModel: ObservableObject, ClassConfigurable {
+        @Published var topPadding: CGFloat = 28
+        @Published var bottomPadding: CGFloat = 20
+        var buttons: [Buttons] = []
+        var buttonsAppearance: ButtonAppearanceDirection = .vertical
+        var showTextView = false
+        var showTextField = false
     }
 }
 
@@ -30,10 +30,10 @@ extension CentrePopupView.ViewModel {
 }
 
 extension CentrePopupView.ViewModel {
-    func setButtons(_ value: [Buttons]) { buttons = value }
-    func setButtonAppearance(_ value: CentrePopupView.ButtonAppearance) { buttonsAppearance = value }
-    func showTextView(_ value: Bool) { showTextView = value }
-    func showTextField(_ value: Bool) { showTextField = value }
+    @discardableResult func setButtons(_ value: [Buttons]) -> Self { configure(path: \.buttons, value) }
+    func setButtonAppearance(_ value: CentrePopupView.ButtonAppearanceDirection) -> Self { configure(path: \.buttonsAppearance, value) }
+    func showTextView(_ value: Bool) -> Self { configure(path: \.showTextView, value) }
+    func showTextField(_ value: Bool) -> Self { configure(path: \.showTextField, value) }
 }
 
 extension CentrePopupView.ViewModel {

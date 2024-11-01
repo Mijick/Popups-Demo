@@ -20,7 +20,7 @@ struct ScrollViewModifier: ViewModifier {
 
 private extension ScrollViewModifier {
     @ViewBuilder func wrap(_ content: Content) -> some View {
-        if isAvailableScrolling { ScrollView { content } }
+        if isAvailableScrolling { ScrollView(showsIndicators: true) { content } }
         else { content }
     }
 }

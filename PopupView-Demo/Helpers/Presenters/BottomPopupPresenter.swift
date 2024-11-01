@@ -117,7 +117,7 @@ private extension BottomPopupPresenter {
     func presentScrollable() {
         let viewModel = ViewModel()
             .isShowTextView(true)
-        
+            .setHeight(393)
         BottomPopupView(viewModel).present()
     }
 }

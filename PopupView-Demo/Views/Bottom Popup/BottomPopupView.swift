@@ -28,16 +28,17 @@ struct BottomPopupView: BottomPopup {
         }
         .padding(.horizontal, viewModel.horizontalPadding)
         .addScrollView(if: viewModel.isActiveScrolling)
+        .frame(height: viewModel.customHeight)
     }
     func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
         config
             .ignoreSafeArea(edges: viewModel.ignoreSafeArea)
             .dragDetents(viewModel.dragPoints)
             .cornerRadius(viewModel.cornerRadius)
-            .popupHorizontalPadding(viewModel.outerHorizontalPadding)
-            .popupBottomPadding(viewModel.outerBottomPadding)
+            .popupHorizontalPadding(viewModel.popupHorizontalPadding)
+            .popupBottomPadding(viewModel.popupBottomPadding)
             .heightMode(viewModel.heightMode)
-            .enableDragGesture(viewModel.isAvailableInteractions)
+            .enableDragGesture(viewModel.isAvailableDragGesture)
             .tapOutsideToDismissPopup(viewModel.isAvailableInteractions)
     }
 }
@@ -54,8 +55,10 @@ private extension BottomPopupView {
             .padding(.bottom, viewModel.brandingBottomPadding)
             .padding(.top, viewModel.brandingTopPadding)
     }
-    @ViewBuilder func createSpacer() -> some View {
-        if viewModel.showSpacer { Spacer.height(viewModel.spacerHeight) }
+    func createSpacer() -> some View {
+        Spacer
+            .height(viewModel.spacerHeight)
+            .active(if: viewModel.showSpacer)
     }
     func createTextField() -> some View {
         PrimaryTextField()
@@ -69,7 +72,7 @@ private extension BottomPopupView {
             .font(.small(.regular))
             .foregroundStyle(Color.textSecondary)
             .padding(.top, 20)
-            .padding(.bottom, 16)
+            .padding(.bottom, 20)
             .padding(.horizontal, 12)
             .active(if: viewModel.showTextView)
     }
@@ -79,6 +82,7 @@ private extension BottomPopupView {
         }
         .padding(.top, 16)
         .padding(.bottom, 8)
+        .active(if: !viewModel.buttons.isEmpty)
     }
 }
 
