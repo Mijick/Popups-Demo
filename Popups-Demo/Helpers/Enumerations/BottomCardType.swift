@@ -9,7 +9,7 @@
 //
 
 enum BottomCardType: String, CardType, CaseIterable {
-    case autoDismiss, autoHeight, dragDetent, fullscreen, large, noOverlay, paddings, scrollable, stack, textField
+    case autoHeight, stack, dragDetent, textField, scrollable, paddings, autoDismiss, large, fullscreen, noOverlay
 }
 
 extension BottomCardType {

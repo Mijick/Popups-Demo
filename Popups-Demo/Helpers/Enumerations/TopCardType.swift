@@ -9,7 +9,7 @@
 //
 
 enum TopCardType: String, CardType, CaseIterable {
-    case autoHeight, stack, textField, dragDetent, fullscreenTextField, fullscreen, paddings, variousOverlays
+    case autoHeight, stack, textField, dragDetent, fullscreen, fullscreenTextField, paddings, variousOverlays
 }
 
 extension TopCardType {
