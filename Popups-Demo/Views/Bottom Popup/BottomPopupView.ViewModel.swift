@@ -39,6 +39,7 @@ extension BottomPopupView.ViewModel {
     func setSpacerHeight(_ value: CGFloat) -> Self { configure(path: \.spacerHeight, value) }
     func setHeightMode(_ value: HeightMode) -> Self { configure(path: \.heightMode, value) }
     func setHeight(_ value: CGFloat?) -> Self { configure(path: \.customHeight, value) }
+    func setCornerRadius(_ value: CGFloat) -> Self { configure(path: \.cornerRadius, value) }
 }
 
 extension BottomPopupView.ViewModel {

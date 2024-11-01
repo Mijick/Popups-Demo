@@ -41,6 +41,7 @@ private extension BottomPopupPresenter {
             .setBottomPadding(24)
             .setHorizontalPaddings(12)
             .setBrandingAppearance(.compact)
+            .setCornerRadius(23)
             .enableInteractions(false)
         
         BottomPopupView(viewModel)
@@ -95,6 +96,7 @@ private extension BottomPopupPresenter {
             .setOverlayColor(.clear)
             .setBottomPadding(24)
             .setHorizontalPaddings(12)
+            .setCornerRadius(23)
             .setBrandingAppearance(.compact)
         
         BottomPopupView(viewModel).present()
