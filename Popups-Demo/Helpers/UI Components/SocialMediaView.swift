@@ -47,9 +47,9 @@ extension Social {
     }
     var link: URL {
         switch self {
-            case .medium: URL(string: "https://medium.com/@mijick")!
-            case .discord: URL(string: "https://discord.gg/KRnz6HN6")!
-            case .github: URL(string: "https://github.com/Mijick")!
+            case .medium: URL(string: "https://link.mijick.com/medium")!
+            case .discord: URL(string: "https://link.mijick.com/discord")!
+            case .github: URL(string: "https://link.mijick.com/github")!
         }
     }
 }
