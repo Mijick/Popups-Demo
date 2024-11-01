@@ -1,6 +1,6 @@
 //
 //  CustomFont.swift
-//  MijickPopups-Demo
+//  Popups-Demo
 //
 //  Created by Alina Petrovska on 23.10.2024.
 //    - Mail: alina.petrovskaya@mijick.com

@@ -1,6 +1,6 @@
 //
 //  BottomPopupPresenter.swift
-//  MijickPopups-Demo
+//  Popups-Demo
 //
 //  Created by Alina Petrovska on 30.10.2024.
 //    - Mail: alina.petrovskaya@mijick.com

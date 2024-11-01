@@ -1,6 +1,6 @@
 //
 //  CentrePopupView.ViewModel.swift
-//  MijickPopups-Demo
+//  Popups-Demo
 //
 //  Created by Alina Petrovska on 28.10.2024.
 //    - Mail: alina.petrovskaya@mijick.com

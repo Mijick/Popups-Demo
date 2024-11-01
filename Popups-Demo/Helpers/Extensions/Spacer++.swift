@@ -1,11 +1,12 @@
 //
-//  Spacer++.swift of PopupView-Example
+//  Spacer++.swift
+//  Popups-Demo
 //
-//  Created by Tomasz Kurylik
-//    - Twitter: https://twitter.com/tkurylik
-//    - Mail: tomasz.kurylik@mijick.com
+//  Created by Alina Petrovska on 29.10.2024.
+//    - Mail: alina.petrovskaya@mijick.com
 //
 //  Copyright ©2023 Mijick. Licensed under MIT License.
+//
 
 
 import SwiftUI

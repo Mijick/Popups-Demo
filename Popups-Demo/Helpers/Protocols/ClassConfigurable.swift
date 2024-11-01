@@ -1,6 +1,6 @@
 //
 //  ClassConfigurable.swift
-//  MijickPopups-Demo
+//  Popups-Demo
 //
 //  Created by Alina Petrovska on 01.11.2024.
 //

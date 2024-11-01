@@ -1,17 +1,18 @@
 //
-//  PopupView_Main.swift of PopupView-Example
+//  Popups_Main.swift 
+//  Popups-Demo
 //
-//  Created by Tomasz Kurylik
-//    - Twitter: https://twitter.com/tkurylik
-//    - Mail: tomasz.kurylik@mijick.com
+//  Created by Alina Petrovska on 29.10.2024.
+//    - Mail: alina.petrovskaya@mijick.com
 //
 //  Copyright ©2023 Mijick. Licensed under MIT License.
+//
 
 
 import SwiftUI
 import MijickPopups
 
-@main struct PopupView_Main: App {
+@main struct Popups_Main: App {
     var body: some Scene { WindowGroup {
         ContentView().registerPopups()
         { container in
