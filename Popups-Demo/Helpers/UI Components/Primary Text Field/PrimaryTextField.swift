@@ -51,6 +51,7 @@ private extension PrimaryTextField {
     }
     func createTextField() -> some View {
         TextField("", text: $text)
+            .font(.small(.regular))
             .foregroundStyle(Color.textPrimary)
             .placeholder(when: text.isEmpty, placeholder: placeHolderView)
     }

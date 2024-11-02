@@ -40,6 +40,7 @@ struct BottomPopupView: BottomPopup {
             .heightMode(viewModel.heightMode)
             .enableDragGesture(viewModel.isAvailableDragGesture)
             .tapOutsideToDismissPopup(viewModel.isAvailableInteractions)
+            .overlayColor(viewModel.overlayColor)
     }
 }
 
