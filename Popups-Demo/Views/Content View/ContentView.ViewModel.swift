@@ -46,7 +46,6 @@ extension ContentView.ViewModel {
     var itemsDistance: CGFloat { 12 }
 }
 
-// MARK: Centre Popup
 private extension ContentView.ViewModel {
     @MainActor func presentCentrePopup(_ card: CentreCardType) {
         switch card {
