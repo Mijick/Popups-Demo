@@ -11,7 +11,7 @@
 import SwiftUI
 
 extension ContentView {
-    class ViewModel: ObservableObject { }
+    class ViewModel { }
 }
 
 extension ContentView.ViewModel {

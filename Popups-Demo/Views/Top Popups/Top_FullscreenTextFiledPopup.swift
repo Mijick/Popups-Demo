@@ -21,8 +21,7 @@ struct Top_FullscreenTextFiledPopup: TopPopup {
         .padding(.bottom, 8)
     }
     func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
-        config
-            .heightMode(.fullscreen)
+        config.heightMode(.fullscreen)
     }
 }
 

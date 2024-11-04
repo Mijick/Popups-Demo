@@ -19,7 +19,7 @@ struct Bottom_Stack4Popup: BottomPopup {
         .padding(.bottom, 8)
         .padding(.top, 40)
     }
-    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig{
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
         config
             .cornerRadius(40)
             .heightMode(.fullscreen)
@@ -35,8 +35,4 @@ private extension Bottom_Stack4Popup {
         PrimaryButton("Dismiss", action: { dismissLastPopup() })
             .changeAppearance(to: .accentedAlternative)
     }
-}
-
-private extension Bottom_Stack4Popup {
-    func onActionButtonTap() {  }
 }

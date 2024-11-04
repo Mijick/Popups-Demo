@@ -18,11 +18,9 @@ struct Top_Stack2Popup: TopPopup {
         .padding(.horizontal, 16)
         .padding(.bottom, 20)
         .padding(.top, 20)
-        
     }
     func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
-        config
-            .cornerRadius(0)
+        config.cornerRadius(0)
     }
 }
 

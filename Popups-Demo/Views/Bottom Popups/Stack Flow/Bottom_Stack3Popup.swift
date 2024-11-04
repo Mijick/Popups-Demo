@@ -20,7 +20,7 @@ struct Bottom_Stack3Popup: BottomPopup {
         .padding(.bottom, 8)
         .padding(.top, 40)
     }
-    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig{
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
         config
             .cornerRadius(40)
             .heightMode(.large)

@@ -13,7 +13,7 @@ import SwiftUI
 import MijickPopups
 
 struct ContentView: View {
-    @StateObject var viewModel: ViewModel = .init()
+    private var viewModel: ViewModel = .init()
     
     var body: some View {
         VStack(spacing: 0) {

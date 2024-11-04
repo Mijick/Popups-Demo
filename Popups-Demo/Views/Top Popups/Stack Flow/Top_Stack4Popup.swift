@@ -19,7 +19,6 @@ struct Top_Stack4Popup: TopPopup {
         .padding(.horizontal, 28)
         .padding(.bottom, 16)
         .padding(.top, 32)
-        
     }
     func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
         config
