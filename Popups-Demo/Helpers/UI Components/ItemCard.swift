@@ -12,7 +12,6 @@ import SwiftUI
 
 struct ItemCard: View {
     let card: CardType
-    let width: CGFloat
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -27,7 +26,7 @@ struct ItemCard: View {
         .padding(.horizontal, 16)
         .padding(.bottom, 16)
         .padding(.top, 20)
-        .frame(width: width, alignment: .leading)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .rectangleBackground(.backgroundSecondary50, 12, borderColor: .borderTertiary)
     }
 }
@@ -46,12 +45,12 @@ private extension ItemCard {
     }
     func createDescription() -> some View {
         Text(card.description)
-            .font(.small(.regular))
+            .font(.smallRegular)
             .foregroundStyle(Color.textSecondary)
     }
     func createTags() -> some View {
         Text(tags)
-            .font(.small(.regular))
+            .font(.smallRegular)
             .foregroundStyle(Color.textBrand)
     }
 }

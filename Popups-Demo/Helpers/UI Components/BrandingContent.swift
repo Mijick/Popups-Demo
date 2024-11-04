@@ -57,7 +57,7 @@ private extension BrandingContent {
 private extension BrandingContent {
     func createTextView() -> some View {
         Text("made by")
-            .font(.small(.regular))
+            .font(.smallRegular)
             .foregroundStyle(Color.textSecondary)
     }
     func createCompanyName() -> some View {

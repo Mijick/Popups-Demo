@@ -14,8 +14,7 @@ import MijickPopups
 
 @main struct Popups_Main: App {
     var body: some Scene { WindowGroup {
-        ContentView().registerPopups()
-        { container in
+        ContentView().registerPopups() { container in
             container.centre {
                 $0.backgroundColor(.backgroundSecondary)
                   .cornerRadius(20)
@@ -25,6 +24,7 @@ import MijickPopups
                 $0.backgroundColor(.backgroundSecondary)
                   .cornerRadius(20)
                   .enableStacking(true)
+                  .tapOutsideToDismissPopup(true)
             }
         }
     }}

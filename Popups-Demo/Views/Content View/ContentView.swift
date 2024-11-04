@@ -13,7 +13,7 @@ import SwiftUI
 import MijickPopups
 
 struct ContentView: View {
-    @StateObject var viewModel: ViewModel = .init()
+    private var viewModel: ViewModel = .init()
     
     var body: some View {
         VStack(spacing: 0) {
@@ -32,6 +32,7 @@ private extension ContentView {
             Spacer()
             createSocialMedia()
         }
+        .padding(.top, 12)
         .padding(.bottom, 18)
     }
     func createScrollableContent() -> some View {
@@ -51,7 +52,7 @@ private extension ContentView {
         Icon(.logo, size: 40)
     }
     func createSocialMedia() -> some View {
-        SocialMediaView()
+        SocialMediaView().configureButtonColor(.backgroundSecondary)
     }
     func createSection(_ cards: [CardType], section name: String) -> some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -85,7 +86,7 @@ private extension ContentView {
 
 private extension ContentView {
     func createRowItem(_ card: CardType) -> some View {
-        ItemCard(card: card, width: viewModel.cardWidth)
+        ItemCard(card: card)
             .onTapGesture { viewModel.onCardTap(card) }
     }
 }

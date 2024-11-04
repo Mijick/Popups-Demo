@@ -19,7 +19,6 @@ extension View {
 extension View {
     func frame(_ size: CGFloat) -> some View { frame(width: size, height: size, alignment: .center) }
     func font(_ type: CustomFont) -> some View { ModifiedContent(content: self, modifier: type) }
-    func addScrollView(if condition: Bool) -> some View { ModifiedContent(content: self, modifier: ScrollViewModifier(condition)) }
     func toAnyView() -> AnyView { .init(self) }
 }
 extension View {
@@ -34,7 +33,7 @@ extension View {
 
 extension View {
     func rectangleBackground(_ color: Color, _ radius: CGFloat, borderColor: Color? = nil) -> some View {
-        self.background {
+        background {
             RoundedRectangle(cornerRadius: radius)
                 .stroke(borderColor ?? .clear, lineWidth: 1)
                 .background { RoundedRectangle(cornerRadius: radius).fill(color) }
