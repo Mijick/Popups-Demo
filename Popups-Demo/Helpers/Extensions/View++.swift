@@ -33,7 +33,7 @@ extension View {
 
 extension View {
     func rectangleBackground(_ color: Color, _ radius: CGFloat, borderColor: Color? = nil) -> some View {
-        self.background {
+        background {
             RoundedRectangle(cornerRadius: radius)
                 .stroke(borderColor ?? .clear, lineWidth: 1)
                 .background { RoundedRectangle(cornerRadius: radius).fill(color) }

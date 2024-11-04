@@ -10,7 +10,9 @@
 
 import SwiftUI
 
-struct SocialMediaView: View {
+struct SocialMediaView: View, Configurable {
+    private var buttonsColor: Color = .backgroundTertiary
+    
     var body: some View {
         HStack(spacing: 4) {
             ForEach(Social.allCases, id: \.self, content: createButton)
@@ -20,7 +22,7 @@ struct SocialMediaView: View {
 
 private extension SocialMediaView {
     func createButton(_ item: Social) -> some View {
-        ButtonIcon(image: item.image) { onTap(item) }
+        ButtonIcon(buttonsColor, item.image) { onTap(item) }
     }
 }
 
@@ -32,6 +34,11 @@ private extension SocialMediaView {
             UIApplication.shared.open(item.link)
         #endif
     }
+}
+
+// MARK: Configurable
+extension SocialMediaView {
+    func configureButtonColor(_ value: Color) -> Self { configure(path: \.buttonsColor, value)}
 }
 
 // MARK: Social Media

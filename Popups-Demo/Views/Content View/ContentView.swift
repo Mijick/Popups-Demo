@@ -52,7 +52,7 @@ private extension ContentView {
         Icon(.logo, size: 40)
     }
     func createSocialMedia() -> some View {
-        SocialMediaView()
+        SocialMediaView().configureButtonColor(.backgroundSecondary)
     }
     func createSection(_ cards: [CardType], section name: String) -> some View {
         VStack(alignment: .leading, spacing: 20) {
