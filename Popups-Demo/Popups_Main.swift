@@ -25,6 +25,7 @@ import MijickPopups
                 $0.backgroundColor(.backgroundSecondary)
                   .cornerRadius(20)
                   .enableStacking(true)
+                  .tapOutsideToDismissPopup(true)
             }
         }
     }}

@@ -30,7 +30,7 @@ extension PrimaryButton.Height {
     var font: CustomFont {
         switch self {
             case .big: .medium
-            case .small: .small(.bold)
+            case .small: .smalBold
         }
     }
 }

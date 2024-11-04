@@ -32,7 +32,7 @@ struct PrimaryTextField: View {
 private extension PrimaryTextField {
     func titleView() -> some View {
         Text(title)
-            .font(.small(.bold))
+            .font(.smalBold)
             .foregroundStyle(Color.textPrimary)
     }
     func createContent() -> some View {
@@ -51,7 +51,7 @@ private extension PrimaryTextField {
     }
     func createTextField() -> some View {
         TextField("", text: $text)
-            .font(.small(.regular))
+            .font(.smallRegular)
             .foregroundStyle(Color.textPrimary)
             .placeholder(when: text.isEmpty, placeholder: placeHolderView)
     }
@@ -60,7 +60,7 @@ private extension PrimaryTextField {
 private extension PrimaryTextField {
     func placeHolderView() -> some View {
         Text(placeholder)
-            .font(.small(.regular))
+            .font(.smallRegular)
             .foregroundColor(.textQuaternary)
     }
 }

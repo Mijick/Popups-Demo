@@ -46,12 +46,12 @@ private extension ItemCard {
     }
     func createDescription() -> some View {
         Text(card.description)
-            .font(.small(.regular))
+            .font(.smallRegular)
             .foregroundStyle(Color.textSecondary)
     }
     func createTags() -> some View {
         Text(tags)
-            .font(.small(.regular))
+            .font(.smallRegular)
             .foregroundStyle(Color.textBrand)
     }
 }
