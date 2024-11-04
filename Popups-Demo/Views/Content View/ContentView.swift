@@ -32,6 +32,7 @@ private extension ContentView {
             Spacer()
             createSocialMedia()
         }
+        .padding(.top, 12)
         .padding(.bottom, 18)
     }
     func createScrollableContent() -> some View {
