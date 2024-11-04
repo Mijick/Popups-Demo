@@ -33,12 +33,6 @@ extension ContentView.ViewModel {
             .filter { !$0.offset.isMultiple(of: 2) }
             .map { $0.element }
     }
-    @MainActor func countCardWidth() -> CGFloat {
-        let paddings = horizontalPadding * 2
-        let contentWidth = Screen.width - paddings - itemsDistance
-        let cardWidth = contentWidth / 2
-        return cardWidth
-    }
 }
 
 extension ContentView.ViewModel {

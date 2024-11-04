@@ -85,7 +85,7 @@ private extension ContentView {
 
 private extension ContentView {
     func createRowItem(_ card: CardType) -> some View {
-        ItemCard(card: card, width: viewModel.countCardWidth())
+        ItemCard(card: card)
             .onTapGesture { viewModel.onCardTap(card) }
     }
 }
