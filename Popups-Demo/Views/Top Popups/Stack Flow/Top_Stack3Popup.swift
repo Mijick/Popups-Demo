@@ -35,12 +35,17 @@ private extension Top_Stack3Popup {
             .padding(.bottom, 8)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
             .setHeight(to: .small)
     }
 }
 
 private extension Top_Stack3Popup {
-    func onActionButtonTap() { Top_Stack4Popup().present() }
+    func onActionButtonTap() { Task {
+        await Top_Stack4Popup().present()
+    }}
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

@@ -28,7 +28,13 @@ private extension Bottom_FullscreenPopup {
         BrandingContent()
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
     }
+}
+
+private extension Bottom_FullscreenPopup {
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

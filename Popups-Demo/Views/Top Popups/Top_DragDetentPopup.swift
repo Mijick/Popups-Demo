@@ -32,11 +32,17 @@ private extension Top_DragDetentPopup {
         BrandingContent()
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
             .setHeight(to: .small)
     }
     func createDragIndicator() -> some View {
         DragIndicator()
     }
+}
+
+private extension Top_DragDetentPopup {
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

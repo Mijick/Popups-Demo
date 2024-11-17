@@ -27,7 +27,6 @@ struct Top_Stack1Popup: TopPopup {
             .popupHorizontalPadding(12)
     }
 }
-
 private extension Top_Stack1Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
@@ -40,14 +39,19 @@ private extension Top_Stack1Popup {
             .padding(.bottom, 8)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
             .setHeight(to: .small)
     }
 }
 
 private extension Top_Stack1Popup {
-    func onActionButtonTap() { Top_Stack2Popup().present() }
+    func onActionButtonTap() { Task {
+        await Top_Stack2Popup().present()
+    }}
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }
 
 private extension Top_Stack1Popup {

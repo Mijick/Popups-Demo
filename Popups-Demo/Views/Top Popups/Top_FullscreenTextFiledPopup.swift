@@ -24,7 +24,6 @@ struct Top_FullscreenTextFiledPopup: TopPopup {
         config.heightMode(.fullscreen)
     }
 }
-
 private extension Top_FullscreenTextFiledPopup {
     func createBrandingContent() -> some View {
         BrandingContent()
@@ -34,7 +33,13 @@ private extension Top_FullscreenTextFiledPopup {
             .padding(.bottom, 12)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
     }
+}
+
+private extension Top_FullscreenTextFiledPopup {
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

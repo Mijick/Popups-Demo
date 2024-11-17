@@ -23,7 +23,6 @@ struct Top_TextFieldPopup: TopPopup {
         config.cornerRadius(20)
     }
 }
-
 private extension Top_TextFieldPopup {
     func createBrandingContent() -> some View {
         BrandingContent()
@@ -34,7 +33,13 @@ private extension Top_TextFieldPopup {
             .padding(.bottom, 12)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
     }
+}
+
+private extension Top_TextFieldPopup {
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

@@ -34,11 +34,14 @@ private extension Top_Stack5Popup {
             .padding(.bottom, 8)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
     }
 }
 
 private extension Top_Stack5Popup {
-    func onActionButtonTap() {  }
+    func onActionButtonTap() {}
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

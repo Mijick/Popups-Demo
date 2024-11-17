@@ -25,14 +25,19 @@ struct Bottom_Stack4Popup: BottomPopup {
             .heightMode(.fullscreen)
     }
 }
-
 private extension Bottom_Stack4Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
             .padding(.bottom, 138)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
     }
+}
+
+private extension Bottom_Stack4Popup {
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }
