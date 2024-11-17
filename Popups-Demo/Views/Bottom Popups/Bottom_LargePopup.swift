@@ -29,7 +29,13 @@ private extension Bottom_LargePopup {
         BrandingContent()
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
     }
+}
+
+private extension Bottom_LargePopup {
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }
