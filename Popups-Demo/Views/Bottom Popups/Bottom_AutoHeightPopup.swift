@@ -20,7 +20,6 @@ struct Bottom_AutoHeightPopup: BottomPopup {
         config.cornerRadius(40)
     }
 }
-
 private extension Bottom_AutoHeightPopup {
     func createBrandingContent() -> some View {
         BrandingContent()

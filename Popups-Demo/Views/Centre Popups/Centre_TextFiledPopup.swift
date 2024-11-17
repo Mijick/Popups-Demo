@@ -41,7 +41,6 @@ private extension Centre_TextFiledPopup {
         }
     }
 }
-
 private extension Centre_TextFiledPopup {
     func createActionButton() -> some View {
         PrimaryButton("Open GitHub", action: onActionButtonTap)

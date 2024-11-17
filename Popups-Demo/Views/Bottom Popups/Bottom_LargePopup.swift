@@ -23,7 +23,6 @@ struct Bottom_LargePopup: BottomPopup {
         config.heightMode(.large)
     }
 }
-
 private extension Bottom_LargePopup {
     func createBrandingContent() -> some View {
         BrandingContent()

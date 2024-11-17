@@ -1,5 +1,5 @@
 //
-//  Bottom_Stack2Popup.swift
+//  Bottom_Stack3Popup.swift
 //  Popups-Demo
 //
 //  Created by Alina Petrovska on 04.11.2024.
@@ -8,10 +8,11 @@
 import SwiftUI
 import MijickPopups
 
-struct Bottom_Stack2Popup: BottomPopup {
+struct Bottom_Stack3Popup: BottomPopup {
     var body: some View {
         VStack(spacing: 0) {
             createBrandingContent()
+            Spacer()
             createActionButton()
             createDismissButton()
         }
@@ -20,11 +21,12 @@ struct Bottom_Stack2Popup: BottomPopup {
         .padding(.top, 40)
     }
     func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
-        config.cornerRadius(40)
+        config
+            .cornerRadius(40)
+            .heightMode(.large)
     }
 }
-
-private extension Bottom_Stack2Popup {
+private extension Bottom_Stack3Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
             .padding(.bottom, 138)
@@ -39,9 +41,9 @@ private extension Bottom_Stack2Popup {
     }
 }
 
-private extension Bottom_Stack2Popup {
+private extension Bottom_Stack3Popup {
     func onActionButtonTap() { Task {
-        await Bottom_Stack3Popup().present()
+        await Bottom_Stack4Popup().present()
     }}
     func onDismissButtonTap() { Task {
         await dismissLastPopup()

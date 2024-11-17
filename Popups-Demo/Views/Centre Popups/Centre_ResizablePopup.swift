@@ -29,7 +29,6 @@ struct Centre_ResizablePopup: CenterPopup {
         config.cornerRadius(20)
     }
 }
-
 private extension Centre_ResizablePopup {
     func createBrandingContent() -> some View {
         BrandingContent()

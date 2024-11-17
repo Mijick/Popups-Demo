@@ -22,7 +22,6 @@ struct Centre_AlertPopup: CenterPopup {
         config.cornerRadius(20)
     }
 }
-
 private extension Centre_AlertPopup {
     func createBrandingContent() -> some View {
         BrandingContent()
@@ -36,7 +35,6 @@ private extension Centre_AlertPopup {
         }
     }
 }
-
 private extension Centre_AlertPopup {
     func createActionButton() -> some View {
         PrimaryButton("Open GitHub", action: onActionButtonTap)

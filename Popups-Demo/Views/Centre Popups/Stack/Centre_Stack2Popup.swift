@@ -24,7 +24,6 @@ struct Centre_Stack2Popup: CenterPopup {
         config.cornerRadius(20)
     }
 }
-
 private extension Centre_Stack2Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
@@ -45,7 +44,6 @@ private extension Centre_Stack2Popup {
         }
     }
 }
-
 private extension Centre_Stack2Popup {
     func createActionButton() -> some View {
         PrimaryButton("Present next popup", action: onActionButtonTap)

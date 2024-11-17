@@ -23,7 +23,6 @@ struct Bottom_TextFieldPopup: BottomPopup {
         config.cornerRadius(40)
     }
 }
-
 private extension Bottom_TextFieldPopup {
     func createBrandingContent() -> some View {
         BrandingContent()
