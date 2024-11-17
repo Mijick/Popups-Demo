@@ -23,7 +23,6 @@ struct Bottom_FullscreenPopup: BottomPopup {
         config.heightMode(.fullscreen)
     }
 }
-
 private extension Bottom_FullscreenPopup {
     func createBrandingContent() -> some View {
         BrandingContent()
