@@ -11,7 +11,7 @@
 import SwiftUI
 import MijickPopups
 
-struct Centre_ResizablePopup: CentrePopup {
+struct Centre_ResizablePopup: CenterPopup {
     @State private var verticalPaddings: CGFloat = 0
     
     var body: some View {
@@ -25,7 +25,7 @@ struct Centre_ResizablePopup: CentrePopup {
         .padding(.bottom, 20)
         .padding(.vertical, verticalPaddings)
     }
-    func configurePopup(config: CentrePopupConfig) -> CentrePopupConfig {
+    func configurePopup(config: CenterPopupConfig) -> CenterPopupConfig {
         config.cornerRadius(20)
     }
 }
@@ -42,7 +42,7 @@ private extension Centre_ResizablePopup {
             .padding(.bottom, 8)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
             .setHeight(to: .small)
     }
@@ -50,4 +50,7 @@ private extension Centre_ResizablePopup {
 
 private extension Centre_ResizablePopup {
     func onActionButtonTap() { verticalPaddings += 60 }
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

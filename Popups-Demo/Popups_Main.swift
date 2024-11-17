@@ -14,8 +14,8 @@ import MijickPopups
 
 @main struct Popups_Main: App {
     var body: some Scene { WindowGroup {
-        ContentView().registerPopups() { container in
-            container.centre {
+        ContentView().registerPopups() { $0
+            .center {
                 $0.backgroundColor(.backgroundSecondary)
                   .cornerRadius(20)
                   .popupHorizontalPadding(20)
