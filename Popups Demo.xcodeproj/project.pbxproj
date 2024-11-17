@@ -168,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				6D59E0612CD8FBD000C46D1D /* Overlay */,
-				6D59E0562CD8F8A400C46D1D /* Stack Flow */,
+				6D59E0562CD8F8A400C46D1D /* Stack */,
 				6D59E0542CD8F85B00C46D1D /* Top_DragDetentPopup.swift */,
 				6D59E0522CD8F84600C46D1D /* Top_FullscreenPopup.swift */,
 				6D59E0502CD8F83600C46D1D /* Top_FullscreenTextFiledPopup.swift */,
@@ -185,21 +185,21 @@
 				6D59E0422CD8E94900C46D1D /* Centre_TextFiledPopup.swift */,
 				6D59E0402CD8E84E00C46D1D /* Centre_AlertPopup.swift */,
 				6D59E0252CD8E0CC00C46D1D /* Centre_ResizablePopup.swift */,
-				6D59E0442CD8E96A00C46D1D /* Stack Flow */,
+				6D59E0442CD8E96A00C46D1D /* Stack */,
 			);
 			path = "Centre Popups";
 			sourceTree = "<group>";
 		};
-		6D59E0442CD8E96A00C46D1D /* Stack Flow */ = {
+		6D59E0442CD8E96A00C46D1D /* Stack */ = {
 			isa = PBXGroup;
 			children = (
 				6D59E0452CD8EC5500C46D1D /* Centre_Stack1Popup.swift */,
 				6D59E0472CD8ED2300C46D1D /* Centre_Stack2Popup.swift */,
 			);
-			path = "Stack Flow";
+			path = Stack;
 			sourceTree = "<group>";
 		};
-		6D59E0562CD8F8A400C46D1D /* Stack Flow */ = {
+		6D59E0562CD8F8A400C46D1D /* Stack */ = {
 			isa = PBXGroup;
 			children = (
 				6D59E0572CD8FB6000C46D1D /* Top_Stack1Popup.swift */,
@@ -208,7 +208,7 @@
 				6D59E05D2CD8FB9300C46D1D /* Top_Stack4Popup.swift */,
 				6D59E05F2CD8FB9F00C46D1D /* Top_Stack5Popup.swift */,
 			);
-			path = "Stack Flow";
+			path = Stack;
 			sourceTree = "<group>";
 		};
 		6D59E0612CD8FBD000C46D1D /* Overlay */ = {
@@ -372,7 +372,7 @@
 		6DE000E32CD9012B00E6BCC3 /* Bottom Popups */ = {
 			isa = PBXGroup;
 			children = (
-				6DE000F82CD9083D00E6BCC3 /* Stack Flow */,
+				6DE000F82CD9083D00E6BCC3 /* Stack */,
 				6DE000F62CD907FD00E6BCC3 /* Bottom_NoOverlayPopup.swift */,
 				6DE000F42CD907EC00E6BCC3 /* Bottom_AutoDismissPopup.swift */,
 				6DE000F02CD907DA00E6BCC3 /* Bottom_PaddingsPopup.swift */,
@@ -386,7 +386,7 @@
 			path = "Bottom Popups";
 			sourceTree = "<group>";
 		};
-		6DE000F82CD9083D00E6BCC3 /* Stack Flow */ = {
+		6DE000F82CD9083D00E6BCC3 /* Stack */ = {
 			isa = PBXGroup;
 			children = (
 				6DE000F92CD9085A00E6BCC3 /* Bottom_Stack1Popup.swift */,
@@ -394,7 +394,7 @@
 				6DE000FD2CD9098900E6BCC3 /* Bottom_Stack3Popup.swift */,
 				6DE000FF2CD9099B00E6BCC3 /* Bottom_Stack4Popup.swift */,
 			);
-			path = "Stack Flow";
+			path = Stack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,7 +8,7 @@
 import SwiftUI
 import MijickPopups
 
-struct Centre_AlertPopup: CentrePopup {
+struct Centre_AlertPopup: CenterPopup {
     var body: some View {
         VStack(spacing: 0) {
             createBrandingContent()
@@ -18,11 +18,10 @@ struct Centre_AlertPopup: CentrePopup {
         .padding(.top, 28)
         .padding(.bottom, 20)
     }
-    func configurePopup(config: CentrePopupConfig) -> CentrePopupConfig {
+    func configurePopup(config: CenterPopupConfig) -> CenterPopupConfig {
         config.cornerRadius(20)
     }
 }
-
 private extension Centre_AlertPopup {
     func createBrandingContent() -> some View {
         BrandingContent()
@@ -36,14 +35,13 @@ private extension Centre_AlertPopup {
         }
     }
 }
-
 private extension Centre_AlertPopup {
     func createActionButton() -> some View {
         PrimaryButton("Open GitHub", action: onActionButtonTap)
             .setHeight(to: .small)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
             .setHeight(to: .small)
     }
@@ -57,6 +55,9 @@ private extension Centre_AlertPopup {
         UIApplication.shared.open(gitHub)
     #endif
     }
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }
 
 private extension Centre_AlertPopup {

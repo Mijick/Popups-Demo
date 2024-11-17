@@ -47,40 +47,40 @@ extension ContentView.ViewModel {
 }
 
 private extension ContentView.ViewModel {
-    @MainActor func presentCentrePopup(_ card: CentreCardType) {
+    @MainActor func presentCentrePopup(_ card: CentreCardType) { Task {
         switch card {
-            case .alert: Centre_AlertPopup().present()
-            case .stack: Centre_Stack1Popup().present()
-            case .textField: Centre_TextFiledPopup().present()
-            case .resizable: Centre_ResizablePopup().present()
+            case .alert: await Centre_AlertPopup().present()
+            case .stack: await Centre_Stack1Popup().present()
+            case .textField: await Centre_TextFiledPopup().present()
+            case .resizable: await Centre_ResizablePopup().present()
         }
-    }
-    @MainActor func presentTopPopup(_ card: TopCardType) {
+    }}
+    @MainActor func presentTopPopup(_ card: TopCardType) { Task {
         switch card {
-            case .autoHeight: Top_AutoHeightPopup().present()
-            case .stack: Top_Stack1Popup().present()
-            case .textField: Top_TextFieldPopup().present()
-            case .dragDetent: Top_DragDetentPopup().present()
-            case .fullscreen: Top_FullscreenPopup().present()
-            case .fullscreenTextField: Top_FullscreenTextFiledPopup().present()
-            case .paddings: Top_PaddingsPopup().present()
-            case .variousOverlays: Top_OverlayPopup(step: .blue).present()
+            case .autoHeight: await Top_AutoHeightPopup().present()
+            case .stack: await Top_Stack1Popup().present()
+            case .textField: await Top_TextFieldPopup().present()
+            case .dragDetent: await Top_DragDetentPopup().present()
+            case .fullscreen: await Top_FullscreenPopup().present()
+            case .fullscreenTextField: await Top_FullscreenTextFiledPopup().present()
+            case .paddings: await Top_PaddingsPopup().present()
+            case .variousOverlays: await Top_OverlayPopup(step: .blue).present()
         }
-    }
-    @MainActor func presentBottomPopup(_ card: BottomCardType) {
+    }}
+    @MainActor func presentBottomPopup(_ card: BottomCardType) { Task {
         switch card {
-            case .autoHeight: Bottom_AutoHeightPopup().present()
-            case .stack: Bottom_Stack1Popup().present()
-            case .dragDetent: Bottom_DragDetentPopup().present()
-            case .textField: Bottom_TextFieldPopup().present()
-            case .scrollable: Bottom_ScrollablePopup().present()
-            case .paddings: Bottom_PaddingsPopup().present()
-            case .autoDismiss: Bottom_AutoDismissPopup().dismissAfter(2).present()
-            case .large: Bottom_LargePopup().present()
-            case .fullscreen: Bottom_FullscreenPopup().present()
-            case .noOverlay: Bottom_NoOverlayPopup().present()
+            case .autoHeight: await Bottom_AutoHeightPopup().present()
+            case .stack: await Bottom_Stack1Popup().present()
+            case .dragDetent: await Bottom_DragDetentPopup().present()
+            case .textField: await Bottom_TextFieldPopup().present()
+            case .scrollable: await Bottom_ScrollablePopup().present()
+            case .paddings: await Bottom_PaddingsPopup().present()
+            case .autoDismiss: await Bottom_AutoDismissPopup().dismissAfter(2).present()
+            case .large: await Bottom_LargePopup().present()
+            case .fullscreen: await Bottom_FullscreenPopup().present()
+            case .noOverlay: await Bottom_NoOverlayPopup().present()
         }
-    }
+    }}
 }
 
 

@@ -1,5 +1,5 @@
 //
-//  Top_Stack3Popup.swift
+//  Bottom_Stack2Popup.swift
 //  Popups-Demo
 //
 //  Created by Alina Petrovska on 04.11.2024.
@@ -8,7 +8,7 @@
 import SwiftUI
 import MijickPopups
 
-struct Top_Stack3Popup: TopPopup {
+struct Bottom_Stack2Popup: BottomPopup {
     var body: some View {
         VStack(spacing: 0) {
             createBrandingContent()
@@ -16,31 +16,33 @@ struct Top_Stack3Popup: TopPopup {
             createDismissButton()
         }
         .padding(.horizontal, 28)
-        .padding(.bottom, 16)
-        .padding(.top, 32)
+        .padding(.bottom, 8)
+        .padding(.top, 40)
     }
-    func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
-        config.cornerRadius(24)
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig {
+        config.cornerRadius(40)
     }
 }
-
-private extension Top_Stack3Popup {
+private extension Bottom_Stack2Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
-            .padding(.bottom, 32)
+            .padding(.bottom, 138)
     }
     func createActionButton() -> some View {
         PrimaryButton("Present next popup", action: onActionButtonTap)
-            .setHeight(to: .small)
-            .padding(.bottom, 8)
+            .padding(.bottom, 10)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
-            .setHeight(to: .small)
     }
 }
 
-private extension Top_Stack3Popup {
-    func onActionButtonTap() { Top_Stack4Popup().present() }
+private extension Bottom_Stack2Popup {
+    func onActionButtonTap() { Task {
+        await Bottom_Stack3Popup().present()
+    }}
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

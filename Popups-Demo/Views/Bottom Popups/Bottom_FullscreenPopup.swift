@@ -23,13 +23,18 @@ struct Bottom_FullscreenPopup: BottomPopup {
         config.heightMode(.fullscreen)
     }
 }
-
 private extension Bottom_FullscreenPopup {
     func createBrandingContent() -> some View {
         BrandingContent()
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
     }
+}
+
+private extension Bottom_FullscreenPopup {
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

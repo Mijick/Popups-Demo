@@ -23,7 +23,6 @@ struct Bottom_DragDetentPopup: BottomPopup {
             .dragDetents([.fraction(1.8), .large])
     }
 }
-
 private extension Bottom_DragDetentPopup {
     func createDragIndicator() -> some View {
         DragIndicator()

@@ -24,7 +24,6 @@ struct Bottom_NoOverlayPopup: BottomPopup {
             .overlayColor(.clear)
     }
 }
-
 private extension Bottom_NoOverlayPopup {
     func createBrandingContent() -> some View {
         BrandingContent().setAppearance(.compact)

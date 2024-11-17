@@ -1,5 +1,5 @@
 //
-//  Top_Stack1Popup.swift
+//  Top_Stack2Popup.swift
 //  Popups-Demo
 //
 //  Created by Alina Petrovska on 04.11.2024.
@@ -8,31 +8,27 @@
 import SwiftUI
 import MijickPopups
 
-struct Top_Stack1Popup: TopPopup {
+struct Top_Stack2Popup: TopPopup {
     var body: some View {
         VStack(spacing: 0) {
             createBrandingContent()
             createActionButton()
             createDismissButton()
         }
-        .padding(.horizontal, 28)
+        .padding(.horizontal, 16)
         .padding(.bottom, 20)
-        .padding(.top, 24)
+        .padding(.top, 20)
     }
     func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
-        config
-            .cornerRadius(20)
-            .ignoreSafeArea(edges: .top)
-            .popupTopPadding(topPopupPadding)
-            .popupHorizontalPadding(12)
+        config.cornerRadius(0)
     }
 }
 
-private extension Top_Stack1Popup {
+private extension Top_Stack2Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
             .setAppearance(.compact)
-            .padding(.bottom, 20)
+            .padding(.bottom, 24)
     }
     func createActionButton() -> some View {
         PrimaryButton("Present next popup", action: onActionButtonTap)
@@ -40,16 +36,17 @@ private extension Top_Stack1Popup {
             .padding(.bottom, 8)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
             .setHeight(to: .small)
     }
 }
 
-private extension Top_Stack1Popup {
-    func onActionButtonTap() { Top_Stack2Popup().present() }
-}
-
-private extension Top_Stack1Popup {
-    var topPopupPadding: CGFloat { Screen.safeArea.top + 8 }
+private extension Top_Stack2Popup {
+    func onActionButtonTap() { Task {
+        await Top_Stack3Popup().present()
+    }}
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

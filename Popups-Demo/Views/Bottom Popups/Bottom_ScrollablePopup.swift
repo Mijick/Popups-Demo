@@ -21,7 +21,6 @@ struct Bottom_ScrollablePopup: BottomPopup {
             .enableDragGesture(false)
     }
 }
-
 private extension Bottom_ScrollablePopup {
     func createContent() -> some View {
         VStack(spacing: 0) {
@@ -33,7 +32,6 @@ private extension Bottom_ScrollablePopup {
         .padding(.bottom, 8)
     }
 }
-
 private extension Bottom_ScrollablePopup {
     func createBrandingContent() -> some View {
         BrandingContent()
@@ -47,7 +45,6 @@ private extension Bottom_ScrollablePopup {
             .padding(.bottom, 20)
     }
 }
-
 private extension Bottom_ScrollablePopup {
     var text: String { "Consectetur voluptate sint ea ullamco eu ex. Nulla duis fugiat magna. Minim proident labore adipisicing voluptate esse laborum tempor nulla laboris duis magna ea ea anim laborum. Esse do dolore irure tempor et commodo sunt irure. Cupidatat est aliquip aliqua in magna in deserunt officia aute Lorem fugiat cillum do id officia. Anim aliquip esse eu laborum consectetur culpa proident dolore nisi commodo. Duis in incididunt ex id excepteur nostrud. Consectetur voluptate sint ea ullamco eu ex. Nulla duis fugiat magna. Minim proident labore adipisicing voluptate esse laborum tempor nulla laboris duis magna ea ea anim laborum. Esse do dolore irure tempor et commodo sunt irure. Cupidatat est aliquip aliqua in magna in deserunt officia aute Lorem fugiat cillum do id officia. Anim aliquip esse eu laborum consectetur culpa proident dolore nisi commodo. Duis in incididunt ex id excepteur nostrud. Consectetur voluptate sint ea ullamco eu ex. Nulla duis fugiat magna. Minim proident labore adipisicing voluptate esse laborum tempor nulla laboris duis magna ea ea anim laborum. Esse do dolore irure tempor et commodo sunt irure. Cupidatat est aliquip aliqua in magna in deserunt officia aute Lorem fugiat cillum do id officia. Anim aliquip esse eu laborum consectetur culpa proident dolore nisi commodo. Duis in incididunt ex id excepteur nostrud." }
 }

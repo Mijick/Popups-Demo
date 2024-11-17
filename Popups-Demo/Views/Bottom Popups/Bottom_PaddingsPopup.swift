@@ -23,7 +23,6 @@ struct Bottom_PaddingsPopup: BottomPopup {
             .popupBottomPadding(8)
     }
 }
-
 private extension Bottom_PaddingsPopup {
     func createBrandingContent() -> some View {
         BrandingContent()

@@ -1,42 +1,40 @@
 //
-//  Centre_ResizablePopup.swift
+//  Top_Stack1Popup.swift
 //  Popups-Demo
 //
 //  Created by Alina Petrovska on 04.11.2024.
-//    - Mail: alina.petrovskaya@mijick.com
-//
-//  Copyright ©2023 Mijick. Licensed under MIT License.
 //
 
 import SwiftUI
 import MijickPopups
 
-struct Centre_ResizablePopup: CenterPopup {
-    @State private var verticalPaddings: CGFloat = 0
-    
+struct Top_Stack1Popup: TopPopup {
     var body: some View {
         VStack(spacing: 0) {
             createBrandingContent()
             createActionButton()
             createDismissButton()
         }
-        .padding(.horizontal, 32)
-        .padding(.top, 28)
+        .padding(.horizontal, 28)
         .padding(.bottom, 20)
-        .padding(.vertical, verticalPaddings)
+        .padding(.top, 24)
     }
-    func configurePopup(config: CenterPopupConfig) -> CenterPopupConfig {
-        config.cornerRadius(20)
+    func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
+        config
+            .cornerRadius(20)
+            .ignoreSafeArea(edges: .top)
+            .popupTopPadding(topPopupPadding)
+            .popupHorizontalPadding(12)
     }
 }
-private extension Centre_ResizablePopup {
+private extension Top_Stack1Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
-            .hideSocialMedia(true)
-            .padding(.bottom, 24)
+            .setAppearance(.compact)
+            .padding(.bottom, 20)
     }
     func createActionButton() -> some View {
-        PrimaryButton("Make popup bigger", action: onActionButtonTap)
+        PrimaryButton("Present next popup", action: onActionButtonTap)
             .setHeight(to: .small)
             .padding(.bottom, 8)
     }
@@ -47,9 +45,15 @@ private extension Centre_ResizablePopup {
     }
 }
 
-private extension Centre_ResizablePopup {
-    func onActionButtonTap() { verticalPaddings += 60 }
+private extension Top_Stack1Popup {
+    func onActionButtonTap() { Task {
+        await Top_Stack2Popup().present()
+    }}
     func onDismissButtonTap() { Task {
         await dismissLastPopup()
     }}
+}
+
+private extension Top_Stack1Popup {
+    var topPopupPadding: CGFloat { Screen.safeArea.top + 8 }
 }

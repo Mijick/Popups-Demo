@@ -32,14 +32,14 @@ extension Top_OverlayPopup.Step {
 }
 
 private extension Top_OverlayPopup.Step {
-    @MainActor func presentGreenPopup() {
-        Top_OverlayPopup(step: .green)
+    @MainActor func presentGreenPopup() { Task {
+        await Top_OverlayPopup(step: .green)
             .setCustomID("Top_GreenOverlayPopup")
             .present()
-    }
-    @MainActor func presentPurplePopup() {
-        Top_OverlayPopup(step: .purple)
+    }}
+    @MainActor func presentPurplePopup() { Task {
+        await Top_OverlayPopup(step: .purple)
             .setCustomID("Top_PurpleOverlayPopup")
             .present()
-    }
+    }}
 }

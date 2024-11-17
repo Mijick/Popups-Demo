@@ -8,7 +8,7 @@
 import SwiftUI
 import MijickPopups
 
-struct Centre_Stack2Popup: CentrePopup {
+struct Centre_Stack2Popup: CenterPopup {
     var body: some View {
         VStack(spacing: 0) {
             createBrandingContent()
@@ -20,11 +20,10 @@ struct Centre_Stack2Popup: CentrePopup {
         .padding(.top, 28)
         .padding(.bottom, 20)
     }
-    func configurePopup(config: CentrePopupConfig) -> CentrePopupConfig {
+    func configurePopup(config: CenterPopupConfig) -> CenterPopupConfig {
         config.cornerRadius(20)
     }
 }
-
 private extension Centre_Stack2Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
@@ -45,7 +44,6 @@ private extension Centre_Stack2Popup {
         }
     }
 }
-
 private extension Centre_Stack2Popup {
     func createActionButton() -> some View {
         PrimaryButton("Present next popup", action: onActionButtonTap)
@@ -53,14 +51,17 @@ private extension Centre_Stack2Popup {
             .padding(.bottom, 8)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
             .setHeight(to: .small)
     }
 }
 
 private extension Centre_Stack2Popup {
-    func onActionButtonTap() { }
+    func onActionButtonTap() {}
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }
 
 private extension Centre_Stack2Popup {

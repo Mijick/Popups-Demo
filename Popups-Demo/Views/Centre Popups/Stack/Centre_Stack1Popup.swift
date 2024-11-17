@@ -1,5 +1,5 @@
 //
-//  Top_Stack2Popup.swift
+//  Centre_Stack1Popup.swift
 //  Popups-Demo
 //
 //  Created by Alina Petrovska on 04.11.2024.
@@ -8,26 +8,25 @@
 import SwiftUI
 import MijickPopups
 
-struct Top_Stack2Popup: TopPopup {
+struct Centre_Stack1Popup: CenterPopup {
     var body: some View {
         VStack(spacing: 0) {
             createBrandingContent()
             createActionButton()
             createDismissButton()
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 32)
+        .padding(.top, 28)
         .padding(.bottom, 20)
-        .padding(.top, 20)
     }
-    func configurePopup(config: TopPopupConfig) -> TopPopupConfig {
-        config.cornerRadius(0)
+    func configurePopup(config: CenterPopupConfig) -> CenterPopupConfig {
+        config.cornerRadius(20)
     }
 }
-
-private extension Top_Stack2Popup {
+private extension Centre_Stack1Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
-            .setAppearance(.compact)
+            .hideSocialMedia(true)
             .padding(.bottom, 24)
     }
     func createActionButton() -> some View {
@@ -36,12 +35,17 @@ private extension Top_Stack2Popup {
             .padding(.bottom, 8)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
             .setHeight(to: .small)
     }
 }
 
-private extension Top_Stack2Popup {
-    func onActionButtonTap() { Top_Stack3Popup().present() }
+private extension Centre_Stack1Popup {
+    func onActionButtonTap() { Task {
+        await Centre_Stack2Popup().present()
+    }}
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

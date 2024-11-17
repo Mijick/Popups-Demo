@@ -23,7 +23,6 @@ struct Bottom_Stack1Popup: BottomPopup {
         config.cornerRadius(40)
     }
 }
-
 private extension Bottom_Stack1Popup {
     func createBrandingContent() -> some View {
         BrandingContent()
@@ -34,11 +33,16 @@ private extension Bottom_Stack1Popup {
             .padding(.bottom, 10)
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
     }
 }
 
 private extension Bottom_Stack1Popup {
-    func onActionButtonTap() { Bottom_Stack2Popup().present() }
+    func onActionButtonTap() { Task {
+        await Bottom_Stack2Popup().present()
+    }}
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }

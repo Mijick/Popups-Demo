@@ -25,7 +25,6 @@ struct Bottom_AutoDismissPopup: BottomPopup {
             .enableDragGesture(false)
     }
 }
-
 private extension Bottom_AutoDismissPopup {
     func createBrandingContent() -> some View {
         BrandingContent().setAppearance(.compact)

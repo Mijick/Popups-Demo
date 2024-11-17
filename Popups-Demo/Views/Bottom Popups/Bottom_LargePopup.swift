@@ -23,13 +23,18 @@ struct Bottom_LargePopup: BottomPopup {
         config.heightMode(.large)
     }
 }
-
 private extension Bottom_LargePopup {
     func createBrandingContent() -> some View {
         BrandingContent()
     }
     func createDismissButton() -> some View {
-        PrimaryButton("Dismiss", action: { dismissLastPopup() })
+        PrimaryButton("Dismiss", action: onDismissButtonTap)
             .changeAppearance(to: .accentedAlternative)
     }
+}
+
+private extension Bottom_LargePopup {
+    func onDismissButtonTap() { Task {
+        await dismissLastPopup()
+    }}
 }
